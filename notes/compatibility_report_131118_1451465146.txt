@@ -1,0 +1,18 @@
+Converting GML script: ${project_dir}\scripts\array\array.gml
+Converted description /// @description array(*args);/// @param *args
+
+Converting GML script: ${project_dir}\objects\player\Alarm_0.gml
+Converted description /// @description Dashing
+
+Converting GML script: ${project_dir}\objects\player\Step_0.gml
+Converted description /// @description  Animation and Movment Controller
+Converted string - line 7: 'W' -> "W"
+Converted string - line 8: 'S' -> "S"
+Converted string - line 9: 'A' -> "A"
+Converted string - line 10: 'D' -> "D"
+
+Windows NSIS Installer Script has been set to default due to changes in GameMaker Studio 2
+Game speed set to 60
+Added compatibility script 'action/action_restart_game.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script '__init_global.gml'
