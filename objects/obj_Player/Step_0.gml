@@ -71,7 +71,7 @@ if (space_key && !dash && !wait){
     spd = dash_spd;
 }
 
-show_debug_message(string(ds_list_size(command_list)));
+//show_debug_message(string(ds_list_size(command_list)));
 
 if atk_light_key combo_stream += "+atk_light";
 if atk_hard_key combo_stream += "+atk_hard";
