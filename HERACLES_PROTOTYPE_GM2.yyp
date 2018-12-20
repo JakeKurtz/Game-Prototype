@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "adb6d2e2-4bb8-4658-bec2-4dc759e8cb9c",
+            "Value": {
+                "id": "7a45c6a8-ddd0-47db-87ac-c0c8ef216807",
+                "resourcePath": "scripts\\player_state_dash\\player_state_dash.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "adcc03d2-aaa5-4909-9317-1e288903de50",
             "Value": {
                 "id": "22e26074-45e8-4fc3-95d1-f86be0702b9b",
@@ -869,6 +877,7 @@
         "d113e9ea-1cee-4aa1-9388-4b8964d44a8a",
         "325b7443-dd03-41c1-8031-c81227f03f2a",
         "d1665a54-80d1-435a-9c48-ebd70c0dd906",
+        "adb6d2e2-4bb8-4658-bec2-4dc759e8cb9c",
         "bc96ec2b-d1a3-4904-9ab2-1495c6972ff3",
         "1416f9cf-295a-4d22-a3f2-bcec8b21135b",
         "a77126df-7ad2-4dbe-b704-27123f8b5a4b",

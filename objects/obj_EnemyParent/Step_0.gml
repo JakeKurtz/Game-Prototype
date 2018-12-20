@@ -23,7 +23,7 @@ else {
 }
 
 //steering = vector_add(steering, alignment(object_index,32,0.5));
-//steering = vector_add(steering, separation(object_index,25,2.5));
+steering = vector_add(steering, separation(object_index,25,2.5));
 //steering = vector_add(steering, cohesion(object_index,184,1));
 //steering = vector_add(steering, avoid_collision(obj_ObstacleParent,16,2,1));
 //steering = vector_add(steering, avoid_collision(obj_EnemyParent,16,1,1));
