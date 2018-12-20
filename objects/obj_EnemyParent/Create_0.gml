@@ -5,19 +5,46 @@ path = path_add();
 
 position = vector(x,y);
 
-MASS = 6;
+MASS = 5;
 ANGLE_CHANGE = 0.25;
 CIRCLE_DISTANCE = 2;
 CIRCLE_RADIUS = 8;
 
 MAX_SEE_AHEAD = 128;
 
-MAX_SPEED = 3;
-MAX_FORCE = 5;
+MAX_SPEED = 4;
+MAX_FORCE = 10;
 ARRIVAL_FORCE = 1;
-MAX_AVOID_FORCE = 5;
+MAX_AVOID_FORCE = 10;
 
 steering		 = vector(0,0);
 velocity		 = vector(0,0);
 desired_velocity = vector(0,0);
 avoidance		 = vector(0,0);
+
+my_path_dir = 1;
+facing = 0;
+can_seek = false;
+
+// Animation arrays
+walk_animations = array(spr_walk_up,
+                        spr_walk_left,
+                        spr_walk_right,
+                        spr_walk_down);
+                 
+attack_animations = array(spr_sword_up,
+	                      spr_sword_left,
+	                      spr_sword_right,
+	                      spr_sword_down);
+
+state_machine_init();
+
+//Define States
+//state_create("Idle",player_state_idle);
+state_create("Patrol",enemy_state_patrol);
+state_create("Pursue",enemy_state_pursue);
+state_create("Attack",enemy_state_attack);
+state_create("Flee",enemy_state_flee);
+
+//Set the default state
+state_init("Patrol");

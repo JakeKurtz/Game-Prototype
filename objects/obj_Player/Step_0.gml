@@ -35,16 +35,16 @@ if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))
 if (y_speed != 0) y_speed -= (walk_decel * sign(y_speed))
 
 #region // horizontal collision
-if (place_meeting(x+x_speed,y,obj_ObstacleParent)) {
-    while(!place_meeting(x+sign(x_speed),y,obj_ObstacleParent)) x += sign(x_speed);
+if (place_meeting(x+x_speed,y,obj_WallParent)) {
+    while(!place_meeting(x+sign(x_speed),y,obj_WallParent)) x += sign(x_speed);
 	if (state_name == "Dash") global.camera_shake = true;
     x_speed = 0;
 } #endregion
 x += x_speed;
  
 #region // vertical collision
-if (place_meeting(x,y+y_speed,obj_ObstacleParent)) {
-    while(!place_meeting(x,y+sign(y_speed),obj_ObstacleParent)) y += sign(y_speed);
+if (place_meeting(x,y+y_speed,obj_WallParent)) {
+    while(!place_meeting(x,y+sign(y_speed),obj_WallParent)) y += sign(y_speed);
 	if (state_name == "Dash") global.camera_shake = true;
     y_speed = 0;
 } #endregion

@@ -1,10 +1,8 @@
 /// @description Properties
 
-/* Comco crap
 atk_type = "";
 combo_stream = "";
 command_list = ds_list_create();
-*/
 
 walk_max = 8;
 walk_accel = 1.5;
