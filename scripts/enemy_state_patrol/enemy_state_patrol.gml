@@ -1,22 +1,32 @@
 if(state_new) {
     MAX_SPEED = 1.5;
 	can_seek = true;
+	image_index = 0;
+	image_speed = 1;
 }
 
+// Sets the objects sprite depending on what direction it's facing.
 for (var i = 0; i < 4; i++){
     if (facing == i) sprite_index = walk_animations[i];
 }
 
-if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path1, 0), path_get_point_y(path1, 0), 1) && can_seek) {
+// Seeks the path that it needs to follow.
+if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path_patrol, 0), path_get_point_y(path_patrol, 0), 1) && can_seek) {
 		steering = vector_add(steering, path_pursue(path,32,1,1));
 }
 
+// Once it's reached the start of the path, it starts its patrol.
 if (path_get_length(path)<= 32) {
 	can_seek = false;
 }
 
 if (can_seek = false) {
-	steering = vector_add(steering, path_tofro(path1,15,my_path_dir,1));	
+	steering = vector_add(steering, path_tofro(path_patrol,15,my_path_dir,1));	
+}
+
+// If the enemey spots the player, change to pursue state.
+if (!(collision_line(x,y,obj_Player.x,obj_Player.y,obj_WallParent,1,0)) && distance_to_object(obj_Player) <= SIGHT_RADIUS) {
+	state_switch("Pursue");	
 }
 
 steering = vector_add(steering, separation(object_index,32,3));
