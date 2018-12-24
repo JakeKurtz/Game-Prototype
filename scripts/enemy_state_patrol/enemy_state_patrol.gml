@@ -33,6 +33,8 @@ if (!(collision_line(x,y,obj_Player.x,obj_Player.y,obj_WallParent,1,0)) && dista
 	state_switch("Pursue");	
 }
 
+if (place_meeting(x,y,obj_Player) && obj_Player.state_name == "Dash") state_switch("Airborn");
+
 steering = vector_add(steering, separation(object_index,32,3));
 steering = vector_add(steering, avoid_collision(obj_ObstacleParent,64,MAX_AVOID_FORCE,3));
 steering = vector_truncate(steering, MAX_FORCE);

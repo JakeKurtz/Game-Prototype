@@ -735,14 +735,6 @@
             }
         },
         {
-            "Key": "cb949b01-dc2b-43c6-bf93-7eb4a7a52970",
-            "Value": {
-                "id": "eb0ab930-f9cb-4682-98b4-412cc22df9b7",
-                "resourcePath": "sprites\\spr_airborn\\spr_airborn.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "807086cb-5c20-4f80-821d-632309c9ce75",
@@ -868,6 +860,14 @@
                 "id": "da2b25c0-b35c-4a93-a901-b4ef83cdc2c3",
                 "resourcePath": "notes\\compatibility_report_131118_1451465146.yy",
                 "resourceType": "GMNotes"
+            }
+        },
+        {
+            "Key": "ee7b2eb1-770e-41c3-a639-2a02ad7f8d5e",
+            "Value": {
+                "id": "fa5d5550-ac84-49d5-af87-3e14888a6abd",
+                "resourcePath": "objects\\obj_Shadow\\obj_Shadow.yy",
+                "resourceType": "GMObject"
             }
         },
         {

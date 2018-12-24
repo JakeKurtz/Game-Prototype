@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 path = path_add();
+path_patrol = path0;
 
 position = vector(x,y);
 
@@ -28,6 +29,10 @@ my_path_dir = 1;
 facing = 0;
 can_seek = false;
 
+shadow_size = 1;
+shadow_height = 45*shadow_size; 
+shadow_width = 40*shadow_size;
+
 // Animation arrays
 walk_animations = array(spr_walk_up,
                         spr_walk_left,
@@ -48,6 +53,7 @@ state_create("Idle",enemy_state_idle);
 state_create("Pursue",enemy_state_pursue);
 state_create("Attack",enemy_state_attack);
 state_create("Flee",enemy_state_flee);
+state_create("Airborn",enemy_state_airborn);
 
 //Set the default state
 state_init("Patrol");

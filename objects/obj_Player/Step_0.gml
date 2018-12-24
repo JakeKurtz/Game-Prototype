@@ -54,4 +54,6 @@ if (place_meeting(x,y+y_speed,obj_WallParent)) {
 } #endregion
 y += y_speed;
 
+if (place_meeting(x,y,obj_EnemyParent) && state_name == "Dash") global.camera_shake = true;
+
 state_execute();

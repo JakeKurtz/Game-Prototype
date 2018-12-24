@@ -21,3 +21,4 @@ for (var i = 0; i < 4; i++){
 }
 
 if (distance_to_object(obj_Player) > 32) state_switch("Pursue");
+if (place_meeting(x,y,obj_Player) && obj_Player.state_name == "Dash") state_switch("Airborn");

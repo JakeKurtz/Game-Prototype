@@ -5,4 +5,6 @@ if(state_new) {
 	image_speed = 0;
 }
 
-if (state_timer >= 120) state_switch("Patrol");
+//if (state_timer >= 120) state_switch("Patrol");
+
+if (place_meeting(x,y,obj_Player) && obj_Player.state_name == "Dash") state_switch("Airborn");

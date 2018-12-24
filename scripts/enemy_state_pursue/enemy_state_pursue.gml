@@ -22,6 +22,7 @@ steering = vector_divr(steering, MASS);
 velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);
 
 if (path_get_length(path) <= 64) state_switch("Attack");
+if (place_meeting(x,y,obj_Player) && obj_Player.state_name == "Dash") state_switch("Airborn");
 
 //else { 
 //	state_switch("Patrol"); 
