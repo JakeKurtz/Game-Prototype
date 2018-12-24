@@ -44,6 +44,7 @@ state_machine_init();
 //Define States
 //state_create("Idle",player_state_idle);
 state_create("Patrol",enemy_state_patrol);
+state_create("Idle",enemy_state_idle);
 state_create("Pursue",enemy_state_pursue);
 state_create("Attack",enemy_state_attack);
 state_create("Flee",enemy_state_flee);

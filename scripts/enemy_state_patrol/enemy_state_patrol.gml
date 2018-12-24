@@ -1,9 +1,10 @@
 if(state_new) {
     MAX_SPEED = 1.5;
-	can_seek = true;
 	image_index = 0;
 	image_speed = 1;
 }
+
+var current_node = path_position;
 
 // Sets the objects sprite depending on what direction it's facing.
 for (var i = 0; i < 4; i++){
@@ -16,12 +17,15 @@ if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path_patrol, 0), path
 }
 
 // Once it's reached the start of the path, it starts its patrol.
-if (path_get_length(path)<= 32) {
-	can_seek = false;
-}
+if (path_get_length(path)<= 32) can_seek = false;
 
 if (can_seek = false) {
-	steering = vector_add(steering, path_tofro(path_patrol,15,my_path_dir,1));	
+	steering = vector_add(steering, path_tofro(path_patrol,15,my_path_dir,1));
+	// Will change state to idle at each node in the path.
+	if (current_node != path_position) {
+		current_node = path_position;
+		state_switch("Idle");
+	}
 }
 
 // If the enemey spots the player, change to pursue state.
@@ -30,7 +34,7 @@ if (!(collision_line(x,y,obj_Player.x,obj_Player.y,obj_WallParent,1,0)) && dista
 }
 
 steering = vector_add(steering, separation(object_index,32,3));
-steering = vector_add(steering, avoid_collision(obj_ObstacleParent,64,1,3));
+steering = vector_add(steering, avoid_collision(obj_ObstacleParent,64,MAX_AVOID_FORCE,3));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
 velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);

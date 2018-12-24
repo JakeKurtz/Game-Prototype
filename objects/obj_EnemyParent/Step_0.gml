@@ -28,6 +28,10 @@ else {
 //steering = vector_add(steering, avoid_collision(obj_ObstacleParent,16,2,1));
 //steering = vector_add(steering, avoid_collision(obj_EnemyParent,16,1,1));
 
+depth = -y;
+
+image_blend = make_colour_rgb(255, 0, 0);
+
 var vector_dir = ceil(vector_direction(velocity));
 
 if (vector_dir >= 0 && vector_dir <= 15) facing = 2;

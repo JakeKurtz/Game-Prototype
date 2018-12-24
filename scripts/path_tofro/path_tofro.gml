@@ -16,8 +16,8 @@ var _distance_to_point = vector_len(vector_sub(_target,position));
 
 if(_distance_to_point < _max_distance) {
     path_position += sign(_dir)/i;
-    if(path_position > (path_get_number(_path)-1)/i) { path_position -= 2/i; my_path_dir *= -1;}
-    if(path_position < 0) { path_position += 2/i; my_path_dir *= -1;}
+    if(path_position > (i-1)/i) { path_position -= 2/i; my_path_dir *= -1;}
+    if(path_position < (1/i)) { path_position += 2/i; my_path_dir *= -1;}
 } 
 
 // subtract current position from target position and constrain to max_speed

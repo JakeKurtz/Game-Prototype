@@ -14,7 +14,7 @@ if (mp_grid_path(global.grid, path, x, y, obj_Player.x, obj_Player.y, 1)) {
 	steering = vector_add(steering, path_pursue(path,32,1,1));
 }
 
-steering = vector_add(steering, separation(object_index,32,3));
+steering = vector_add(steering, separation(object_index,16,3));
 steering = vector_add(steering, separation(obj_Player,32,2));
 steering = vector_add(steering, avoid_collision(obj_ObstacleParent,64,1,3));
 steering = vector_truncate(steering, MAX_FORCE);

@@ -655,6 +655,14 @@
             }
         },
         {
+            "Key": "b77d3afd-25ad-4ca8-ae53-867eb2b67fd3",
+            "Value": {
+                "id": "c10a0c08-86e1-4adb-b094-bf7d2f568aca",
+                "resourcePath": "scripts\\enemy_state_airborn\\enemy_state_airborn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b96683b2-3a15-4647-a9da-f1484d84385c",
             "Value": {
                 "id": "55141979-6a53-4975-9937-ea20567d9fab",
@@ -687,6 +695,14 @@
             }
         },
         {
+            "Key": "c826fb6c-9f99-4c4a-9eb2-7c695a006376",
+            "Value": {
+                "id": "6cd3c009-f301-4c4a-b62f-767109c35751",
+                "resourcePath": "scripts\\enemy_state_idle\\enemy_state_idle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c83cdc5e-1e47-4315-8057-f67d70c61904",
             "Value": {
                 "id": "0d206a0f-3261-4aed-a290-c3a6d9da164b",
@@ -715,6 +731,14 @@
             "Value": {
                 "id": "cfa3b469-b037-4f0b-98a0-6e7514de9865",
                 "resourcePath": "sprites\\spr_sword_right\\spr_sword_right.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cb949b01-dc2b-43c6-bf93-7eb4a7a52970",
+            "Value": {
+                "id": "eb0ab930-f9cb-4682-98b4-412cc22df9b7",
+                "resourcePath": "sprites\\spr_airborn\\spr_airborn.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -947,7 +971,9 @@
         "71831207-bf0f-4906-8fe1-5c8977d61bc6",
         "daa950cf-da28-41f8-aa09-75c5d4348c22",
         "558cbfb2-e910-4b20-86ec-6a95dddacfbd",
-        "4ef2614c-a524-4924-8c2f-df0fe61261b0"
+        "4ef2614c-a524-4924-8c2f-df0fe61261b0",
+        "c826fb6c-9f99-4c4a-9eb2-7c695a006376",
+        "b77d3afd-25ad-4ca8-ae53-867eb2b67fd3"
     ],
     "tutorial": ""
 }

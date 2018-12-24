@@ -3,7 +3,7 @@
 draw_self();
 
 /*
-if (mp_grid_path(global.grid, path, x, y, obj_Player.x, obj_Player.y, 1)) {
+if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path_patrol, 0), path_get_point_y(path_patrol, 0), 1)) {
 	draw_path(path, x, y, false);
 }
 
