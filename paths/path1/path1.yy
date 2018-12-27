@@ -11,32 +11,32 @@
             "id": "3578557a-dd40-4099-b447-09f7615cf6f6",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 256,
-            "y": 240,
+            "x": 1008,
+            "y": 336,
             "speed": 100
         },
         {
-            "id": "aa009121-f44b-4c9d-b902-d98228679196",
+            "id": "eb2de13d-308b-43da-8d47-5d146b8b312f",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 256,
-            "y": 656,
+            "x": 1008,
+            "y": 528,
             "speed": 100
         },
         {
-            "id": "7529a845-3c7c-485a-a1ec-aba78fa7bc1a",
+            "id": "c8bebbf1-41af-411b-a5a8-ceaf58535a4b",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 928,
-            "y": 656,
+            "x": 496,
+            "y": 528,
             "speed": 100
         },
         {
-            "id": "b36813f5-0d3e-405c-a3f4-93c322559962",
+            "id": "cacfcfd8-d346-4d73-b83e-62445ed396ce",
             "modelName": "GMPathPoint",
             "mvc": "1.0",
-            "x": 928,
-            "y": 144,
+            "x": 496,
+            "y": 192,
             "speed": 100
         }
     ],

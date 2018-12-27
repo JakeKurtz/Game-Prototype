@@ -5,7 +5,7 @@ if(state_new) {
 	image_speed = 0;
 }
 
-var dir = point_direction(x,y,obj_Player.x,obj_Player.y)
+var dir = point_direction(x,y,obj_player.x,obj_player.y)
 
 if (dir >= 0 && dir < 45) facing = 2;
 else if (dir >= 45 && dir < 90) facing = 0;
@@ -20,5 +20,4 @@ for (var i = 0; i < 4; i++){
     if (facing == i) sprite_index = walk_animations[i];
 }
 
-if (distance_to_object(obj_Player) > 32) state_switch("Pursue");
-if (place_meeting(x,y,obj_Player) && obj_Player.state_name == "Dash") state_switch("Airborn");
+if (distance_to_object(obj_player) > 32) state_switch("Pursue");

@@ -1,5 +1,8 @@
 /// @description Properties
 
+position = vector(0,0);
+velocity = vector(0,0);
+
 atk_type = "";
 combo_stream = "";
 command_list = ds_list_create();

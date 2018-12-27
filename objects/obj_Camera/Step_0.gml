@@ -1,7 +1,7 @@
 /// @description Insert description here
 
-x = obj_Player.x;
-y = obj_Player.y;
+x = obj_player.x;
+y = obj_player.y;
 
 if global.camera_shake {
 	var ran_x = random_range(-shake,shake);

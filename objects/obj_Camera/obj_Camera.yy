@@ -2,7 +2,7 @@
     "id": "adcc03d2-aaa5-4909-9317-1e288903de50",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_Camera",
+    "name": "obj_camera",
     "eventList": [
         {
             "id": "6994bd33-2231-4f3c-8a42-ad67c33f95e2",

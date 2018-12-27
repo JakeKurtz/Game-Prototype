@@ -16,9 +16,9 @@ if (attack_key) {
 	state_switch("Attack");	
 }
 
-else if	(up_key && !place_meeting(x,y-1,obj_ObstacleParent) || 
-		left_key && !place_meeting(x-1,y,obj_ObstacleParent) || 
-		right_key && !place_meeting(x+1,y,obj_ObstacleParent) || 
-		down_key && !place_meeting(x,y+1,obj_ObstacleParent)) {
+else if	(up_key && !place_meeting(x,y-1,obj_solid_nonentity) || 
+		left_key && !place_meeting(x-1,y,obj_solid_nonentity) || 
+		right_key && !place_meeting(x+1,y,obj_solid_nonentity) || 
+		down_key && !place_meeting(x,y+1,obj_solid_nonentity)) {
 		state_switch("Walk");
 	}

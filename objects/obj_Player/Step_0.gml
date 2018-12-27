@@ -3,6 +3,7 @@
 // TODO : Make the collsions less clunky
 
 position = vector(x,y);
+velocity = vector(x_speed,y_speed);
 
 #region // MOVEMENT INPUT
 
@@ -39,21 +40,21 @@ if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))
 if (y_speed != 0) y_speed -= (walk_decel * sign(y_speed))
 
 #region // horizontal collision
-if (place_meeting(x+x_speed,y,obj_WallParent)) {
-    while(!place_meeting(x+sign(x_speed),y,obj_WallParent)) x += sign(x_speed);
+if (place_meeting(x+x_speed,y,obj_solid_nonentity)) {
+    while(!place_meeting(x+sign(x_speed),y,obj_solid_nonentity)) x += sign(x_speed);
 	if (state_name == "Dash") global.camera_shake = true;
     x_speed = 0;
 } #endregion
 x += x_speed;
  
 #region // vertical collision
-if (place_meeting(x,y+y_speed,obj_WallParent)) {
-    while(!place_meeting(x,y+sign(y_speed),obj_WallParent)) y += sign(y_speed);
+if (place_meeting(x,y+y_speed,obj_solid_nonentity)) {
+    while(!place_meeting(x,y+sign(y_speed),obj_solid_nonentity)) y += sign(y_speed);
 	if (state_name == "Dash") global.camera_shake = true;
     y_speed = 0;
 } #endregion
 y += y_speed;
 
-if (place_meeting(x,y,obj_EnemyParent) && state_name == "Dash") global.camera_shake = true;
+//if (place_meeting(x,y,obj_enemy_parent) && state_name == "Dash") global.camera_shake = true;
 
 state_execute();
