@@ -16,7 +16,8 @@ for(var i = 1; i <= num; i++) {
     tot += v1[i] * v1[i];
 }
 
-if(tot != 0) {
+if(tot > 0) {
+	show_debug_message(string(tot));
     tot = sqrt(tot);
     for(var i = 1; i<= num; i++) {
         v[i] = v1[i] / tot;

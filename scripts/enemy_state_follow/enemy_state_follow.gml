@@ -21,7 +21,7 @@ if (obj_nearest != noone) {
 }
 
 steering = vector_add(steering, sb_avoid_collision(obj_player,64,MAX_AVOID_FORCE,3));
-steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 32, 0.5));
+steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 16, 1));
 steering = vector_add(steering, sb_separation(object_index,32,1));
 steering = vector_add(steering, sb_alignment(object_index,32,0.5));
 steering = vector_add(steering, sb_cohesion(object_index,32,0.1));

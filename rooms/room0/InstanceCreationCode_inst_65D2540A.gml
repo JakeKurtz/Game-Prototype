@@ -1,1 +1,0 @@
-state_init("Patrol");

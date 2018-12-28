@@ -14,8 +14,7 @@
         "ca1eda00-d68b-4f00-9a8a-ceca132984bb",
         "a4e7cffc-4a26-4e50-9737-a5efe1f6cbcf",
         "7d08d2ce-2213-4c18-802d-664a71c68e2c",
-        "e0227e98-010b-4dff-babb-9e20bd0fdaf6",
-        "ffaa6219-b194-4655-81eb-46ffcafcbb2c"
+        "e0227e98-010b-4dff-babb-9e20bd0fdaf6"
     ],
     "filterType": "GMScript",
     "folderName": "STEERING",

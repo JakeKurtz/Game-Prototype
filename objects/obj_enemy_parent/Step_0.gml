@@ -16,15 +16,15 @@ else if (vector_dir >= 270 && vector_dir < 315) facing = 3;
 else if (vector_dir >= 345) facing = 2;
 
 #region // horizontal collision
-if (place_meeting(x+velocity[1],y,obj_solid_all)) {
-    while(!place_meeting(x+sign(velocity[1]),y,obj_solid_all)) x += sign(velocity[1]);
+if (place_meeting(x+velocity[1],y,obj_solid_nonentity)) {
+    while(!place_meeting(x+sign(velocity[1]),y,obj_solid_nonentity)) x += sign(velocity[1]);
     velocity[1] = 0;
 } #endregion
 x += velocity[1];
 
 #region // vertical collision
-if (place_meeting(x,y+velocity[2],obj_solid_all)) {
-    while(!place_meeting(x,y+sign(velocity[2]),obj_solid_all)) y += sign(velocity[2]);
+if (place_meeting(x,y+velocity[2],obj_solid_nonentity)) {
+    while(!place_meeting(x,y+sign(velocity[2]),obj_solid_nonentity)) y += sign(velocity[2]);
     velocity[2] = 0;
 } #endregion
 y += velocity[2];
