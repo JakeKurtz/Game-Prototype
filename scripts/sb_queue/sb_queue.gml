@@ -32,7 +32,7 @@ if (_neighbor != noone) {
          
     _force = vector_scaler(_force,-1);
     _brake = vector_add(_brake, _force);
-    _brake = vector_add(_brake, sb_separation(_object, 32, 1));
+    _brake = vector_add(_brake, sb_separation(_object, 64, 1));
          
     if (point_distance(position[1], position[2], _neighbor.position[1], _neighbor.position[2]) <= _max_radius_queue) {
         velocity = vector_scaler(velocity, 0.3);

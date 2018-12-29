@@ -609,6 +609,25 @@
             }
         },
         {
+            "Key": "42ee8562-6c8f-4257-a1c0-98b2d0a9fa25",
+            "Value": {
+                "id": "da477de9-7f5c-4c42-abea-5ce4de1851c8",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "paths\/path2\/path2.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "4551f930-cd98-4bc2-9df2-ccb5670da4cc",
             "Value": {
                 "id": "03bfc0e6-9ec3-440d-b67b-956475031329",

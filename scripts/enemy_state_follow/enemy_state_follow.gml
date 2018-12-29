@@ -20,11 +20,12 @@ if (obj_nearest != noone) {
 	if (obj_nearest.state_name == "Idle" && distance_to_object(obj_nearest) <= 128) state_switch("Idle");
 }
 
-steering = vector_add(steering, sb_avoid_collision(obj_player,64,MAX_AVOID_FORCE,3));
-steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 16, 1));
-steering = vector_add(steering, sb_separation(object_index,32,1));
-steering = vector_add(steering, sb_alignment(object_index,32,0.5));
-steering = vector_add(steering, sb_cohesion(object_index,32,0.1));
+steering = vector_add(steering, sb_avoid_collision(obj_obstacle,64,MAX_AVOID_FORCE,1.5));
+steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 100, 2));
+//steering = vector_add(steering, sb_separation(object_index,32,2));
+//steering = vector_add(steering, sb_alignment(object_index,32,2.5));
+//steering = vector_add(steering, sb_cohesion(object_index,32,1));
+steering = vector_add(steering, sb_queue(object_index, 32, 32));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
 velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);

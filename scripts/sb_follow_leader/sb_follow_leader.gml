@@ -17,7 +17,7 @@ if (_nearest_leader != noone) {
 	_tv = vector_scaler(_tv,_leader_behind_dist);
 	
 	// Calculating ahead point.
-	var _ahead = vector_scaler(vector_add(_nearest_leader.position, _tv), 1.5);
+	var _ahead = vector_add(_nearest_leader.position, _tv);
 	
 	// Calculating behind point.
 	_tv = vector_scaler(_tv,-1);
@@ -25,12 +25,13 @@ if (_nearest_leader != noone) {
 
 	// If the character is on the leader's sight, add a force
     // to evade the route immediately.
-    if (distance_to_point(_ahead[1],_ahead[2]) <= 100 || distance_to_object(_nearest_leader) <= 100) {
-        _force = vector_add(_force, sb_evade(_nearest_leader, _weight*3));
+	
+    if (distance_to_point(_ahead[1],_ahead[2]) <= 64 || distance_to_object(_nearest_leader) <= 64) {
+        _force = vector_add(_force, sb_evade(_nearest_leader, _weight*2.5));
     }
 
 	// Creates a force to arrive at the behind point
-	_force = vector_add(_force, sb_seek_arrive(_behind[1],_behind[2], _leader_behind_dist*4, _weight));
+	_force = vector_add(_force, sb_seek_arrive(_behind[1],_behind[2], _leader_behind_dist, _weight));
 	
 	return _force;
 }

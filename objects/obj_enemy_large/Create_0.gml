@@ -28,21 +28,22 @@ avoidance		 = vector(0,0);
 my_path_dir = 1;
 facing = 0;
 can_seek = false;
+my_path_position = 0;
 
 shadow_size = 1;
 shadow_height = 45*shadow_size; 
 shadow_width = 40*shadow_size;
 
 // Animation arrays
-walk_animations = array(spr_walk_up,
-                        spr_walk_left,
-                        spr_walk_right,
-                        spr_walk_down);
+walk_animations = array(spr_enemy,
+                        spr_enemy,
+                        spr_enemy,
+                        spr_enemy);
                  
-attack_animations = array(spr_sword_up,
-	                      spr_sword_left,
-	                      spr_sword_right,
-	                      spr_sword_down);
+attack_animations = array(spr_enemy,
+	                      spr_enemy,
+	                      spr_enemy,
+	                      spr_enemy);
 
 state_machine_init();
 

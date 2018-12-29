@@ -22,8 +22,8 @@ if (path_get_length(path)<= 32) can_seek = false;
 if (can_seek = false) {
 	steering = vector_add(steering, sb_path_tofro(path_patrol,15,my_path_dir,0.5));
 	// Will change state to idle at each node in the path.
-	if (current_node != path_position && state_timer >= 480) {
-		current_node = path_position;
+	if (current_node != my_path_position && state_timer >= 480) {
+		current_node = my_path_position;
 		state_switch("Idle");
 	}
 }
@@ -33,8 +33,8 @@ if (!(collision_line(x,y,obj_player.x,obj_player.y,obj_solid_nonentity,1,0)) && 
 	state_switch("Pursue");	
 }
 
-steering = vector_add(steering, sb_avoid_collision(obj_obstacle,64,MAX_AVOID_FORCE,3));
-steering = vector_add(steering, sb_queue(obj_enemy_parent, 32, 32));
+//steering = vector_add(steering, sb_avoid_collision(obj_obstacle,64,MAX_AVOID_FORCE,3));
+steering = vector_add(steering, sb_queue(object_index, 32, 16));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
 velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);
