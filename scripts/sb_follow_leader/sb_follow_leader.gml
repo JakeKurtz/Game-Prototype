@@ -26,7 +26,7 @@ if (_nearest_leader != noone) {
 	// If the character is on the leader's sight, add a force
     // to evade the route immediately.
 	
-    if (distance_to_point(_ahead[1],_ahead[2]) <= 64 || distance_to_object(_nearest_leader) <= 64) {
+    if (distance_to_point(_ahead[1],_ahead[2]) <= 32 || distance_to_object(_nearest_leader) <= 32) {
         _force = vector_add(_force, sb_evade(_nearest_leader, _weight*2.5));
     }
 
