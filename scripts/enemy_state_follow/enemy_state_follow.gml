@@ -14,25 +14,28 @@ for (var i = 0; i < 4; i++){
 // Getting the nearest leader
 var obj_nearest = instance_nearest(x,y,obj_enemy_leader);
 
-if ((collision_line(x,y,obj_nearest.x,obj_nearest.y,obj_solid_nonentity,1,0))){
+if ((collision_line(x,y,obj_nearest.x,obj_nearest.y,obj_solid_nonentity,0,0))){
 	if (mp_grid_path(global.grid, path, x, y, obj_nearest.x, obj_nearest.y, 1)) {
-		steering = vector_add(steering, sb_path_pursue(path,32,1,1.5));
+		steering = vector_add(steering, sb_path_pursue(path,32,1,1.2));
 	}
 }
 else {
-	steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 100, 2));	
+	steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 15, 32, 1));	
 }
 // Matching the nearest leaders speed and state
 if (obj_nearest != noone) {	
-	//MAX_SPEED = obj_nearest.MAX_SPEED;
-	if (obj_nearest.state_name == "Idle" && distance_to_object(obj_nearest) <= 128) state_switch("Idle");
+	MAX_SPEED = obj_nearest.MAX_SPEED;
+	if (obj_nearest.state_name == "Idle") {
+		sb_brake(0.08, 0.3);
+		if (distance_to_object(obj_nearest) <= 128) {
+			state_switch("Idle");
+		}
+	}
 }
 
-steering = vector_add(steering, sb_avoid_collision(obj_obstacle,64,MAX_AVOID_FORCE,1.5));
-steering = vector_add(steering, sb_separation(object_index,32,2));
-steering = vector_add(steering, sb_alignment(object_index,32,2.5));
-steering = vector_add(steering, sb_cohesion(object_index,32,1));
-steering = vector_add(steering, sb_queue(object_index, 32, 32));
+steering = vector_add(steering, sb_separation(object_index,50,3));
+steering = vector_add(steering, sb_alignment(object_index,40,2));
+steering = vector_add(steering, sb_queue(object_index, 40, 30));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
 velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);

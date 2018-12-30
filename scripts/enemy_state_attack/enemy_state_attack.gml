@@ -16,8 +16,8 @@ else if (dir >= 225 && dir < 270) facing = 3;
 else if (dir >= 270 && dir < 315) facing = 3;
 else facing = 2;
 
-for (var i = 0; i < 4; i++){
+for (var i = 0; i < 4; i++) {
     if (facing == i) sprite_index = walk_animations[i];
 }
 
-if (distance_to_object(obj_player) > 32) state_switch("Pursue");
+if (distance_to_object(obj_player) > attack_range) state_switch("Pursue");

@@ -6,7 +6,7 @@ path_patrol = path0;
 
 position = vector(x,y);
 
-MASS = 5;
+MASS = 15;
 ANGLE_CHANGE = 0.25;
 CIRCLE_DISTANCE = 2;
 CIRCLE_RADIUS = 8;
@@ -15,7 +15,7 @@ SIGHT_RADIUS = 500;
 
 MAX_SEE_AHEAD = 128;
 
-MAX_SPEED = 4;
+MAX_SPEED = 5;
 MAX_FORCE = 5;
 ARRIVAL_FORCE = 1;
 MAX_AVOID_FORCE = 10;

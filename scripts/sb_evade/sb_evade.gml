@@ -13,7 +13,7 @@ if(instance_exists(_target_obj)) { // Target exists
     // subtract current position from target position and constrain to max_speed
     var _desired_velocity = vector_scaler(vector_sub(position,_target_future_pos),MAX_SPEED);
     
-    return (vector_scaler(vector_sub(_desired_velocity,velocity),_weight));
+    return (vector_mulr(vector_sub(_desired_velocity,velocity),_weight));
 
 } else { // No target
     return vector(0,0);

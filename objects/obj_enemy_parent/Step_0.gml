@@ -29,4 +29,6 @@ if (place_meeting(x,y+velocity[2],obj_solid_nonentity)) {
 } #endregion
 y += velocity[2];
 
+//image_angle = vector_direction(velocity);
+
 state_execute();

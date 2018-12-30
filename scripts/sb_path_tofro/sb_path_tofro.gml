@@ -21,4 +21,4 @@ if(_distance_to_point < _max_distance) {
 // subtract current position from target position and constrain to max_speed
 var _desired_velocity = vector_scaler(vector_sub(_target,position),MAX_SPEED);
 
-return vector_scaler(vector_sub(_desired_velocity,velocity),_weight);
+return vector_mulr(vector_sub(_desired_velocity,velocity),_weight);

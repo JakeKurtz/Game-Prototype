@@ -25,6 +25,8 @@ velocity		 = vector(0,0);
 desired_velocity = vector(0,0);
 avoidance		 = vector(0,0);
 
+attack_range = 32;
+
 my_path_dir = 1;
 facing = 0;
 can_seek = false;

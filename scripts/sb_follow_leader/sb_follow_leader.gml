@@ -5,7 +5,8 @@
 
 var _leader = argument[0];
 var _leader_behind_dist = argument[1];
-var _weight = argument[2];
+var _sight_radius = argument[2];
+var _weight = argument[3];
 var _force = vector(0,0);
 
 var _nearest_leader = instance_nearest(x,y,_leader)
@@ -26,7 +27,7 @@ if (_nearest_leader != noone) {
 	// If the character is on the leader's sight, add a force
     // to evade the route immediately.
 	
-    if (distance_to_point(_ahead[1],_ahead[2]) <= 32 || distance_to_object(_nearest_leader) <= 32) {
+    if (distance_to_point(_ahead[1],_ahead[2]) <= _sight_radius || distance_to_object(_nearest_leader) <= _sight_radius) {
         _force = vector_add(_force, sb_evade(_nearest_leader, _weight*2.5));
     }
 

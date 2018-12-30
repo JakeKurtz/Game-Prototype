@@ -36,15 +36,15 @@ atk_light_key = false;
 dash_key = false;
 
 // Animation arrays
-walk_animations = array(spr_walk_up,
-                        spr_walk_left,
-                        spr_walk_right,
-                        spr_walk_down);
+walk_animations = array(spr_player,
+                        spr_player,
+                        spr_player,
+                        spr_player);
                  
-attack_animations = array(spr_sword_up,
-	                      spr_sword_left,
-	                      spr_sword_right,
-	                      spr_sword_down);
+attack_animations = array(spr_player,
+	                      spr_player,
+	                      spr_player,
+	                      spr_player);
 
 state_machine_init();
 

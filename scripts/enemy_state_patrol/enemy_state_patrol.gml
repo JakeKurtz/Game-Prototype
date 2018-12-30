@@ -13,7 +13,7 @@ for (var i = 0; i < 4; i++){
 
 // Seeks the path that it needs to follow.
 if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path_patrol, 0), path_get_point_y(path_patrol, 0), 1) && can_seek) {
-		steering = vector_add(steering, sb_path_pursue(path,32,1,0.5));
+		steering = vector_add(steering, sb_path_pursue(path,32,1,1));
 }
 
 // Once it's reached the start of the path, it starts its patrol.
@@ -24,7 +24,7 @@ if (can_seek = false) {
 	// Will change state to idle at each node in the path.
 	if (current_node != my_path_position && state_timer >= 480) {
 		current_node = my_path_position;
-		state_switch("Idle");
+		//state_switch("Idle");
 	}
 }
 
