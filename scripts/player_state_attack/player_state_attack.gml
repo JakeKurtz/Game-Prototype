@@ -5,34 +5,35 @@
 
 if(state_new) {
     image_index = 0;
+	sprite_index = animations_attack[0];
 }
 
 WASD_enabled = false;
 
-//if sprite_index != attack_animations[i] image_index = 0;
-			
-//if (ds_list_find_value(command_list, ds_list_size(command_list)-1) == "atk_light") {
-	//sprite_index = attack_animations[i];
-	//show_debug_message("atk_light");
-//} //else if(ds_list_find_value(command_list, ds_list_size(command_list)-1) == "atk_hard") {
-	//show_debug_message("atk_strong");
-//} //else if(ds_list_find_value(command_list, ds_list_size(command_list)-1) == "atk_light + atk_strong") {
-	//atk_type = "Uppercut";
-	//show_debug_message("atk_both");
-//}
-
-/*if (atk_light_key) combo_stream += "+atk_light";
-if (atk_hard_key) combo_stream += "+atk_hard";
-
-ds_list_add(command_list, string_delete(combo_stream, 1, 1)); // removes '+' from string
-
-while(ds_list_size(command_list) >= 4) {
-	ds_list_delete(command_list, 0);	
+if (image_index >= 1 && image_index <= 4) {
+		with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_hitbox)) {
+			image_xscale = other.image_xscale;
+		}
 }
 
-show_debug_message(string(combo_stream));
-*/
-
-sprite_index = attack_animations[0];
+if (key_attack) {
+	show_debug_message(string(image_index));
+	if (combo == 0 && image_index <= 4) {
+		with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_hitbox)) {
+			image_xscale = other.image_xscale;
+		}
+		image_index = 0; 
+		sprite_index = animations_attack[1]; 
+	} 
+	else if (combo == 1 && image_index <= 4) {
+		with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_hitbox)) {
+			image_xscale = other.image_xscale;
+		}
+		image_index = 0; 
+		sprite_index = animations_attack[2]; 
+	}
+	alarm[0] = room_speed/2;
+	combo += 1;
+}
 
 if (image_index+image_speed >= image_number) state_switch("Idle");

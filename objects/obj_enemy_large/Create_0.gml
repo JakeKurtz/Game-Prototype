@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+take_damage = true;
+flash = 0;
+
 image_scale = 2;
 
 image_speed = 0.5;
@@ -61,11 +64,12 @@ attack_animations = array(spr_minotaur_attack1,
 state_machine_init();
 
 #region //Define States
-state_create("Patrol",enemy_state_patrol);
-state_create("Idle",enemy_state_idle);
-state_create("Idle Attack", enemy_state_idle_attack);
-state_create("Pursue",enemy_state_pursue);
-state_create("Attack",enemy_state_m_attack);
+state_create("Patrol",enemyLarge_state_patrol);
+state_create("Idle",enemyLarge_state_idle);
+state_create("Idle Attack", enemyLarge_state_idleAttack);
+state_create("Pursue",enemyLarge_state_pursue);
+state_create("Attack",enemyLarge_state_attackMelee);
+state_create("Stunned",enemyLarge_state_stun);
 #endregion
 
 //Set the default state

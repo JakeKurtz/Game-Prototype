@@ -13,13 +13,13 @@ if(state_new) {
 
 sprite_index = spr_player_idle;
 
-if (attack_key) {
+if (key_attack) {
 	state_switch("Attack");	
 }
 
-else if	(up_key && !place_meeting(x,y-1,obj_solid_nonentity) || 
-		left_key && !place_meeting(x-1,y,obj_solid_nonentity) || 
-		right_key && !place_meeting(x+1,y,obj_solid_nonentity) || 
-		down_key && !place_meeting(x,y+1,obj_solid_nonentity)) {
+else if	(key_up && !place_meeting(x,y-1,obj_solid_nonentity) || 
+		key_left && !place_meeting(x-1,y,obj_solid_nonentity) || 
+		key_right && !place_meeting(x+1,y,obj_solid_nonentity) || 
+		key_down && !place_meeting(x,y+1,obj_solid_nonentity)) {
 		state_switch("Walk");
 	}

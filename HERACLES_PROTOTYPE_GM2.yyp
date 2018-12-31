@@ -82,7 +82,7 @@
             "Key": "0ecc781e-1ce7-41a5-ba76-5b9a848d0446",
             "Value": {
                 "id": "2c17a441-5adf-4b27-9d40-20b07e703026",
-                "resourcePath": "scripts\\enemy_small_state_flee\\enemy_small_state_flee.yy",
+                "resourcePath": "scripts\\enemySmall_state_flee\\enemySmall_state_flee.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -127,6 +127,14 @@
             }
         },
         {
+            "Key": "1697fd1f-2e69-4b9d-a04a-970eba3575e4",
+            "Value": {
+                "id": "82827505-a78d-439a-8075-d26cd8210d8f",
+                "resourcePath": "scripts\\enemySmall_state_idle\\enemySmall_state_idle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "16ff0fcf-e0a1-40ab-ab8a-7a127e534cfc",
             "Value": {
                 "id": "7938b048-fd22-4f8a-89c2-27fe65985d8e",
@@ -162,7 +170,7 @@
             "Key": "1c7185a8-22bf-4a7c-8b32-e664f2989039",
             "Value": {
                 "id": "5716a21a-8a4a-4d4c-ac4b-71c8fa8ffd74",
-                "resourcePath": "scripts\\enemy_small_state_idle_attack\\enemy_small_state_idle_attack.yy",
+                "resourcePath": "scripts\\enemySmall_state_idleAttack\\enemySmall_state_idleAttack.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -183,11 +191,27 @@
             }
         },
         {
+            "Key": "20a4b0f0-7a80-4dce-8bf6-4e96eb3d15b8",
+            "Value": {
+                "id": "857ff850-9239-44b0-ba89-bd04f9fa41fb",
+                "resourcePath": "scripts\\enemyRanged_state_idle\\enemyRanged_state_idle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2351fb7f-9954-4c7f-b182-b7e0dc95f531",
             "Value": {
                 "id": "3cacce03-e157-4323-bc8c-83b060e4af94",
                 "resourcePath": "views\/2351fb7f-9954-4c7f-b182-b7e0dc95f531.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "236fdec8-6dc2-4c67-94e2-9ea7fd3bfb9c",
+            "Value": {
+                "id": "a99e8235-3187-40b1-8a21-b0e8cc31ba29",
+                "resourcePath": "scripts\\enemyRanged_state_patrol\\enemyRanged_state_patrol.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -311,6 +335,14 @@
             }
         },
         {
+            "Key": "419b87f8-8a2c-408f-a7a1-9c11fa1ca6b1",
+            "Value": {
+                "id": "3b684740-161c-46ed-87b7-4f9c3d163a4f",
+                "resourcePath": "scripts\\enemyLarge_state_patrol\\enemyLarge_state_patrol.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "41c90fc7-8356-44f3-9d2b-a4ead35328d0",
             "Value": {
                 "id": "9cb62294-70b0-4d95-b40a-4a5144494294",
@@ -367,10 +399,18 @@
             }
         },
         {
+            "Key": "4e4e328d-5d50-4b1e-a5f6-31ce0462e4f1",
+            "Value": {
+                "id": "c3b8a085-9876-48f2-82a8-dfa84df33af2",
+                "resourcePath": "objects\\obj_player_hitbox\\obj_player_hitbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4ef2614c-a524-4924-8c2f-df0fe61261b0",
             "Value": {
                 "id": "4e95257e-c407-4549-94d5-8a83e08a0616",
-                "resourcePath": "scripts\\enemy_state_r_flee\\enemy_state_r_flee.yy",
+                "resourcePath": "scripts\\enemyRanged_state_flee\\enemyRanged_state_flee.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -420,6 +460,14 @@
                 "id": "ceac95c1-0000-48a8-ae13-f4241ab8171e",
                 "resourcePath": "sprites\\spr_player_dies\\spr_player_dies.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "5661f4e3-8d33-4bfd-9c99-ecb391d58b19",
+            "Value": {
+                "id": "790b9fbb-2d50-4285-a527-8feeed74b366",
+                "resourcePath": "scripts\\enemyLarge_state_pursue\\enemyLarge_state_pursue.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -567,6 +615,14 @@
             }
         },
         {
+            "Key": "7484fa06-00e0-4e4c-95c3-e7e5bae66514",
+            "Value": {
+                "id": "ef5d7e76-e88a-43bf-9dc6-eca3d0b69726",
+                "resourcePath": "scripts\\enemyLarge_state_stun\\enemyLarge_state_stun.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "750a97df-7d51-43c6-aad2-14b6e7b70c96",
             "Value": {
                 "id": "f74c50f8-897e-4b93-b45b-328e9c55472f",
@@ -583,11 +639,11 @@
             }
         },
         {
-            "Key": "765b4ddd-f770-4d13-acfd-f5da185ca81c",
+            "Key": "761bc7af-17d6-4bbc-a7e5-9f36ec39334d",
             "Value": {
-                "id": "08386a0e-0f0f-459b-86b7-f864edb0ca59",
-                "resourcePath": "views\\765b4ddd-f770-4d13-acfd-f5da185ca81c.yy",
-                "resourceType": "GMFolder"
+                "id": "6c6ee806-41c6-4c9d-9135-7d50fa71608f",
+                "resourcePath": "scripts\\enemyLarge_state_idleAttack\\enemyLarge_state_idleAttack.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -655,10 +711,26 @@
             }
         },
         {
+            "Key": "838789ad-f148-405e-a478-d4dd03f23a60",
+            "Value": {
+                "id": "1036ab1f-a3b8-44bd-8135-94547c9235a9",
+                "resourcePath": "scripts\\enemySmall_state_attackMelee\\enemySmall_state_attackMelee.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "845927bc-fbb4-4107-90cb-c81c212e4652",
+            "Value": {
+                "id": "3aa2f688-724e-4ff4-ab1c-51c8f37e521b",
+                "resourcePath": "sprites\\spr_player_hitbox\\spr_player_hitbox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "84bd26f1-9834-42b5-934c-1bdadc625a9f",
             "Value": {
                 "id": "5584a98a-50f1-4d33-9bed-f0e9076327ac",
-                "resourcePath": "scripts\\enemy_state_r_attack\\enemy_state_r_attack.yy",
+                "resourcePath": "scripts\\enemyRanged_state_attackRanged\\enemyRanged_state_attackRanged.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -671,10 +743,26 @@
             }
         },
         {
+            "Key": "8afa7434-f89a-43ad-8312-fcda8c760bc0",
+            "Value": {
+                "id": "34d999de-dc42-41bc-a085-c3b41c6b38ab",
+                "resourcePath": "scripts\\enemyRanged_state_attackMelee\\enemyRanged_state_attackMelee.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "8c03ebc0-5674-4524-9e43-0904b3e899dc",
             "Value": {
                 "id": "493aa368-4b0c-4ea9-b56e-09bd78001ecd",
                 "resourcePath": "scripts\/sb_seek_arrive\/sb_seek_arrive.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8fc9195d-e9c0-499e-9139-2b29e1abd790",
+            "Value": {
+                "id": "3bf98b61-0ddf-4b19-b7c7-478ba98b3f82",
+                "resourcePath": "scripts\\enemyLarge_state_attackMelee\\enemyLarge_state_attackMelee.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -703,6 +791,14 @@
             }
         },
         {
+            "Key": "98892354-f787-444b-8971-584ccb001db8",
+            "Value": {
+                "id": "5fe0f77f-c5ae-47cc-8c74-9d04b6c84ed1",
+                "resourcePath": "views\\98892354-f787-444b-8971-584ccb001db8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9bb4494b-3212-45c8-94ec-7b8a370cece5",
             "Value": {
                 "id": "bfad52ae-3290-45b1-86ef-07ca010aedec",
@@ -714,7 +810,15 @@
             "Key": "9cbf0ba0-8211-4891-802b-f0af2515b20e",
             "Value": {
                 "id": "3ff8eacf-f7a6-4c23-a9c8-7abef2551e12",
-                "resourcePath": "scripts\\enemy_state_r_pursue\\enemy_state_r_pursue.yy",
+                "resourcePath": "scripts\\enemyRanged_state_pursue\\enemyRanged_state_pursue.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "9f1412da-164b-4f12-898f-e6e60d6afa06",
+            "Value": {
+                "id": "396df121-8fd5-4b7a-97df-efbc4b90f253",
+                "resourcePath": "scripts\\enemyLarge_state_idle\\enemyLarge_state_idle.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -847,6 +951,14 @@
             }
         },
         {
+            "Key": "b51cbdc9-36ff-4549-9b67-51dcff5a3bdf",
+            "Value": {
+                "id": "b576197c-9fa3-4ad3-ac75-30aaff071bcf",
+                "resourcePath": "shaders\\shd_flash\\shd_flash.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "b73e6f62-38ec-4e90-b7c5-83cd3107fd80",
             "Value": {
                 "id": "90dc1f9d-b591-4ec9-8238-f5493abb3f7b",
@@ -879,6 +991,14 @@
             }
         },
         {
+            "Key": "bc6e412a-bc56-44ac-9fa4-e04921d49f01",
+            "Value": {
+                "id": "c31ec8b6-d0a1-4732-bedc-402870d1e11d",
+                "resourcePath": "scripts\\enemySmall_state_stun\\enemySmall_state_stun.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bc96ec2b-d1a3-4904-9ab2-1495c6972ff3",
             "Value": {
                 "id": "8c198678-9f25-4c91-9ae3-454366fca737",
@@ -895,11 +1015,27 @@
             }
         },
         {
+            "Key": "bee96f48-6bf2-40f2-8174-742e30c5a1c8",
+            "Value": {
+                "id": "1c97939f-73d9-4542-9c6f-e6c4b5c3c848",
+                "resourcePath": "scripts\\enemySmall_state_wander\\enemySmall_state_wander.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c1e77669-7cde-430b-8981-3fe3a41a4a2d",
             "Value": {
                 "id": "5971e509-7a20-4528-9b80-cce13d6a0757",
                 "resourcePath": "objects\/obj_TestOb\/obj_TestOb.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c24c5f85-8b41-43af-bafa-4922fc516983",
+            "Value": {
+                "id": "a842e955-7814-42d2-8076-cb6539712b6d",
+                "resourcePath": "scripts\\enemyRanged_state_idleAttack\\enemyRanged_state_idleAttack.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -999,6 +1135,14 @@
             }
         },
         {
+            "Key": "d1baa17d-29e9-4fd8-a137-6555f723727c",
+            "Value": {
+                "id": "12b3e19f-cef4-41b4-9970-6a4f8ca82185",
+                "resourcePath": "scripts\\enemySmall_state_pursue\\enemySmall_state_pursue.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d38d510a-9955-408b-9579-2f8f113c7eb9",
             "Value": {
                 "id": "d08b26b3-d942-4c1b-9c5e-0b0c0a6d09dd",
@@ -1050,7 +1194,7 @@
             "Key": "d8fb61c0-652f-40bd-ada7-3f1af19fa864",
             "Value": {
                 "id": "0f4ff5d4-f77b-4b01-9d64-7f57cc31565f",
-                "resourcePath": "scripts\\enemy_small_state_follow\\enemy_small_state_follow.yy",
+                "resourcePath": "scripts\\enemySmall_state_follow\\enemySmall_state_follow.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1231,6 +1375,14 @@
             }
         },
         {
+            "Key": "fbd07758-1157-4350-81cb-3c8ef381f0b5",
+            "Value": {
+                "id": "53f0f2a9-5fec-4256-963e-76355504b7e1",
+                "resourcePath": "views\\fbd07758-1157-4350-81cb-3c8ef381f0b5.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "fd05d02a-5ccd-43d1-b1f9-6dbb22be8f17",
             "Value": {
                 "id": "26837f06-8548-451b-a6a1-78c14ee8b256",
@@ -1335,13 +1487,28 @@
         "c826fb6c-9f99-4c4a-9eb2-7c695a006376",
         "b77d3afd-25ad-4ca8-ae53-867eb2b67fd3",
         "2e46f9c2-cc8a-4ae3-9e03-667c49743a3a",
-        "84bd26f1-9834-42b5-934c-1bdadc625a9f",
-        "4ef2614c-a524-4924-8c2f-df0fe61261b0",
-        "9cbf0ba0-8211-4891-802b-f0af2515b20e",
         "558cbfb2-e910-4b20-86ec-6a95dddacfbd",
-        "1c7185a8-22bf-4a7c-8b32-e664f2989039",
+        "236fdec8-6dc2-4c67-94e2-9ea7fd3bfb9c",
+        "9cbf0ba0-8211-4891-802b-f0af2515b20e",
+        "4ef2614c-a524-4924-8c2f-df0fe61261b0",
+        "20a4b0f0-7a80-4dce-8bf6-4e96eb3d15b8",
+        "c24c5f85-8b41-43af-bafa-4922fc516983",
+        "8afa7434-f89a-43ad-8312-fcda8c760bc0",
+        "84bd26f1-9834-42b5-934c-1bdadc625a9f",
         "0ecc781e-1ce7-41a5-ba76-5b9a848d0446",
-        "d8fb61c0-652f-40bd-ada7-3f1af19fa864"
+        "d8fb61c0-652f-40bd-ada7-3f1af19fa864",
+        "bee96f48-6bf2-40f2-8174-742e30c5a1c8",
+        "1c7185a8-22bf-4a7c-8b32-e664f2989039",
+        "838789ad-f148-405e-a478-d4dd03f23a60",
+        "d1baa17d-29e9-4fd8-a137-6555f723727c",
+        "1697fd1f-2e69-4b9d-a04a-970eba3575e4",
+        "bc6e412a-bc56-44ac-9fa4-e04921d49f01",
+        "419b87f8-8a2c-408f-a7a1-9c11fa1ca6b1",
+        "5661f4e3-8d33-4bfd-9c99-ecb391d58b19",
+        "9f1412da-164b-4f12-898f-e6e60d6afa06",
+        "7484fa06-00e0-4e4c-95c3-e7e5bae66514",
+        "761bc7af-17d6-4bbc-a7e5-9f36ec39334d",
+        "8fc9195d-e9c0-499e-9139-2b29e1abd790"
     ],
     "tutorial": ""
 }

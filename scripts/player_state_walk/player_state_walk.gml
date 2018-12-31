@@ -8,17 +8,17 @@ WASD_enabled = true;
 
 sprite_index = spr_player_walk;
 
-x_speed += (-left_key + right_key) * walk_accel;
-y_speed += (-up_key + down_key) * walk_accel;
+x_speed += (-key_left + key_right) * walk_accel;
+y_speed += (-key_up + key_down) * walk_accel;
 
 x_speed = clamp(x_speed,-walk_max,walk_max);
 y_speed = clamp(y_speed,-walk_max,walk_max);
 
-if (dash_key) {
+if (key_dash) {
 	state_switch("Dash");
 }
 
-else if (attack_key) {
+else if (key_attack) {
 	state_switch("Attack");	
 }
 

@@ -6,13 +6,13 @@ image_speed = 0.5;
 image_xscale = image_xscale*image_scale;
 image_yscale = image_yscale*image_scale;
 
-
 position = vector(0,0);
 velocity = vector(0,0);
 
 atk_type = "";
 combo_stream = "";
 command_list = ds_list_create();
+combo = 0;
 
 walk_max = 8;
 walk_accel = 1.5;
@@ -36,21 +36,21 @@ timer=0;
 scale=1;
 
 //Directions
-up_key = false;
-down_key = false;
-left_key = false;
-right_key = false;
-attack_key = false
-atk_hrd_key = false;
-atk_light_key = false;
-dash_key = false;
+key_up = false;
+key_down = false;
+key_left = false;
+key_right = false;
+key_attack = false
+key_atk_hrd = false;
+key_atk_light = false;
+key_dash = false;
 
 // Animation arrays
-idle_animations = array(spr_player_idle);
+animations_idle = array(spr_player_idle);
 
-walk_animations = array(spr_player_walk);
+animations_walk = array(spr_player_walk);
                  
-attack_animations = array(spr_player_attack1,
+animations_attack = array(spr_player_attack1,
 	                      spr_player_attack2,
 	                      spr_player_attack3,);
 

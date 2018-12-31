@@ -10,7 +10,7 @@
         "adb6d2e2-4bb8-4658-bec2-4dc759e8cb9c"
     ],
     "filterType": "GMScript",
-    "folderName": "PLAYER",
+    "folderName": "PLAYER STATES",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

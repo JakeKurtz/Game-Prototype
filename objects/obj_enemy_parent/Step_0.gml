@@ -33,6 +33,10 @@ if (place_meeting(x,y+velocity[2],obj_solid_nonentity)) {
 } #endregion
 y += velocity[2];
 
-//image_angle = vector_direction(velocity);
+if (place_meeting(x,y,obj_player_hitbox) && take_damage) {
+	flash = 1;	
+	take_damage = false;
+	alarm[0] = 30;
+}
 
 state_execute();

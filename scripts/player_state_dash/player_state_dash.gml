@@ -1,8 +1,8 @@
 if(state_new) {
     image_speed = 0;
     image_index = 2;
-	state_x_dir = (-left_key + right_key);
-	state_y_dir = (-up_key + down_key);
+	state_x_dir = (-key_left + key_right);
+	state_y_dir = (-key_up + key_down);
 }
 
 WASD_enabled = false;

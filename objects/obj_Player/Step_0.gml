@@ -7,32 +7,32 @@ velocity = vector(x_speed,y_speed);
 
 #region // MOVEMENT INPUT
 
-up_key = keyboard_check(ord("W"));
-down_key = keyboard_check(ord("S"));
-left_key = keyboard_check(ord("A"));
-right_key = keyboard_check(ord("D"));
-dash_key = keyboard_check_pressed(vk_space);
-atk_light_key = mouse_check_button_pressed(mb_left);
-atk_hard_key = mouse_check_button_pressed(mb_right);
+key_up = keyboard_check(ord("W"));
+key_down = keyboard_check(ord("S"));
+key_left = keyboard_check(ord("A"));
+key_right = keyboard_check(ord("D"));
+key_dash = keyboard_check_pressed(vk_space);
+key_atk_light = mouse_check_button_pressed(mb_left);
+key_atk_hard = mouse_check_button_pressed(mb_right);
 
-attack_key = (atk_light_key || atk_hard_key);
+key_attack = (key_atk_light || key_atk_hard);
 
 #endregion
 
 #region // Getting direction of player
 if WASD_enabled {	
-	if up_key                  facing = 0;
-	if left_key                facing = 1;
-	if right_key               facing = 2;
-	if down_key                facing = 3;
-	if (up_key && left_key)    facing = 0;
-	if (up_key && right_key)   facing = 0;
-	if (down_key && left_key)  facing = 3;
-	if (down_key && right_key) facing = 3;
+	if key_up                  facing = 0;
+	if key_left               facing = 1;
+	if key_right               facing = 2;
+	if key_down                facing = 3;
+	if (key_up && key_left)    facing = 0;
+	if (key_up && key_right)   facing = 0;
+	if (key_down && key_left)  facing = 3;
+	if (key_down && key_right) facing = 3;
 } #endregion
 
-if (left_key) image_xscale = -image_scale;
-else if (right_key) image_xscale = image_scale;
+if (key_left) image_xscale = -image_scale;
+else if (key_right) image_xscale = image_scale;
 
 depth = -y;
 

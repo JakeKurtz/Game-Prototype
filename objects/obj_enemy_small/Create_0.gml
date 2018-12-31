@@ -2,6 +2,8 @@
 // You can write your code in this editor
 
 image_scale = 2;
+flash = 0;
+take_damage = true;
 
 image_speed = 0.5;
 image_xscale = image_xscale*image_scale;
@@ -10,7 +12,7 @@ image_yscale = image_yscale*image_scale;
 path = path_add();
 path_patrol = path0;
 
-m_attack_range = 5;
+m_attack_range = 1;
 r_attack_range = 32;
 flee_range = 200;
 
@@ -59,14 +61,15 @@ attack_animations = array(spr_zombie_attack1,
 state_machine_init();
 
 #region //Define States
-state_create("Patrol",enemy_state_patrol);
-state_create("Pursue",enemy_state_pursue);
-state_create("Idle",enemy_state_idle);
-state_create("Idle Attack", enemy_small_state_idle_attack);
-state_create("Attack",enemy_state_m_attack);
-state_create("Flee",enemy_small_state_flee);
-state_create("Follow",enemy_small_state_follow);
+state_create("Pursue",enemySmall_state_pursue);
+state_create("Idle",enemySmall_state_idle);
+state_create("Idle Attack", enemySmall_state_idleAttack);
+state_create("Attack",enemySmall_state_attackMelee);
+state_create("Flee",enemySmall_state_flee);
+state_create("Follow",enemySmall_state_follow);
+state_create("Wander",enemySmall_state_wander);
+state_create("Stun",enemySmall_state_stun);
 #endregion
 
 //Set the default state
-state_init("Follow");
+state_init("Wander");
