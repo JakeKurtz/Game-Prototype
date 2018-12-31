@@ -31,9 +31,10 @@ if WASD_enabled {
 	if (down_key && right_key) facing = 3;
 } #endregion
 
-depth = -y;
+if (left_key) image_xscale = -image_scale;
+else if (right_key) image_xscale = image_scale;
 
-image_blend = make_colour_rgb(0, 255, 0);
+depth = -y;
 
 // Decelerating movement
 if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))

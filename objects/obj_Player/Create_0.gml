@@ -1,5 +1,12 @@
 /// @description Properties
 
+image_scale = 2;
+
+image_speed = 0.5;
+image_xscale = image_xscale*image_scale;
+image_yscale = image_yscale*image_scale;
+
+
 position = vector(0,0);
 velocity = vector(0,0);
 
@@ -14,6 +21,9 @@ walk_decel = 0.5;
 dash_max = 20;
 dash_accel = 5;
 dash_decel = 0.5;
+
+default_image_speed = 0.5;
+image_speed = default_image_speed;
 
 //Changing Variables
 x_speed = 0;
@@ -36,15 +46,13 @@ atk_light_key = false;
 dash_key = false;
 
 // Animation arrays
-walk_animations = array(spr_player,
-                        spr_player,
-                        spr_player,
-                        spr_player);
+idle_animations = array(spr_player_idle);
+
+walk_animations = array(spr_player_walk);
                  
-attack_animations = array(spr_player,
-	                      spr_player,
-	                      spr_player,
-	                      spr_player);
+attack_animations = array(spr_player_attack1,
+	                      spr_player_attack2,
+	                      spr_player_attack3,);
 
 state_machine_init();
 

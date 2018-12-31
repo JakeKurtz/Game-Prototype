@@ -5,7 +5,6 @@
 
 if(state_new) {
     image_index = 0;
-	image_speed = 1;
 }
 
 WASD_enabled = false;
@@ -33,8 +32,7 @@ while(ds_list_size(command_list) >= 4) {
 
 show_debug_message(string(combo_stream));
 */
-for (var i = 0; i < 4; i++){
-    if (facing == i) sprite_index = attack_animations[i];
-}
+
+sprite_index = attack_animations[0];
 
 if (image_index+image_speed >= image_number) state_switch("Idle");

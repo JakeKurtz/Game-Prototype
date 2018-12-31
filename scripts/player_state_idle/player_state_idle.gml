@@ -3,14 +3,15 @@
 if(state_new) {
     x_speed=0;
     y_speed=0;
-    image_speed=0;
-    sprite_index=spr_walk_down;
+    sprite_index=spr_player_idle;
     image_index=0;
 }
 
-for (var i = 0; i < 4; i++){
+/*for (var i = 0; i < array_length_1d(walk_animations); i++){
     if (facing == i) sprite_index = walk_animations[i];
-}
+}*/
+
+sprite_index = spr_player_idle;
 
 if (attack_key) {
 	state_switch("Attack");	
