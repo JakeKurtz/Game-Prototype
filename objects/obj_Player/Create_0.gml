@@ -1,8 +1,8 @@
 /// @description Properties
 
 image_scale = 2;
-
-image_speed = 0.5;
+default_image_speed = 0.7;
+image_speed = default_image_speed;
 image_xscale = image_xscale*image_scale;
 image_yscale = image_yscale*image_scale;
 
@@ -21,9 +21,6 @@ walk_decel = 0.5;
 dash_max = 20;
 dash_accel = 5;
 dash_decel = 0.5;
-
-default_image_speed = 0.5;
-image_speed = default_image_speed;
 
 //Changing Variables
 x_speed = 0;

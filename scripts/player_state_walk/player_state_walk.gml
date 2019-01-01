@@ -17,9 +17,7 @@ y_speed = clamp(y_speed,-walk_max,walk_max);
 if (key_dash) {
 	state_switch("Dash");
 }
-
 else if (key_attack) {
 	state_switch("Attack");	
 }
-
 else if (x_speed == 0 && y_speed == 0) state_switch("Idle");
