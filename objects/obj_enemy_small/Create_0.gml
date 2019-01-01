@@ -5,7 +5,8 @@ image_scale = 2;
 flash = 0;
 take_damage = true;
 
-image_speed = 0.5;
+default_image_speed = 0.5
+image_speed = default_image_speed;
 image_xscale = image_xscale*image_scale;
 image_yscale = image_yscale*image_scale;
 
@@ -27,17 +28,17 @@ shadow_width = 40*shadow_size;
 
 #region // Steering constants
 MASS = 5;
-ANGLE_CHANGE = 0.25;
-CIRCLE_DISTANCE = 2;
-CIRCLE_RADIUS = 8;
+ANGLE_CHANGE = 0.5;
+CIRCLE_DISTANCE = 100;
+CIRCLE_RADIUS = 25;
 
 SIGHT_RADIUS = 500;
 MAX_SEE_AHEAD = 128;
 
 MAX_SPEED = 2;
-MAX_FORCE = 0.3;
+MAX_FORCE = 0.5;
 ARRIVAL_FORCE = 1;
-MAX_AVOID_FORCE = 1;
+MAX_AVOID_FORCE = 5;
 #endregion
 
 #region // Steering vectors
@@ -50,7 +51,7 @@ avoidance = vector(0,0);
 
 #region // Animation arrays
 
-idle_animations = array(spr_zombie_idle2);
+idle_animations = array(spr_zombie_idle2,spr_zombie_f_idle);
 
 walk_animations = array(spr_zombie_walk);
                  

@@ -3,10 +3,11 @@
 
 take_damage = true;
 flash = 0;
+default_image_speed = 0.5;
 
 image_scale = 2;
 
-image_speed = 0.5;
+image_speed = default_image_speed;
 image_xscale = image_xscale*image_scale;
 image_yscale = image_yscale*image_scale;
 
@@ -35,9 +36,9 @@ SIGHT_RADIUS = 500;
 MAX_SEE_AHEAD = 128;
 
 MAX_SPEED = 4;
-MAX_FORCE = 1;
+MAX_FORCE = .5;
 ARRIVAL_FORCE = 1;
-MAX_AVOID_FORCE = 10;
+MAX_AVOID_FORCE = 5;
 #endregion
 
 #region // Steering vectors
@@ -69,7 +70,7 @@ state_create("Idle",enemyLarge_state_idle);
 state_create("Idle Attack", enemyLarge_state_idleAttack);
 state_create("Pursue",enemyLarge_state_pursue);
 state_create("Attack",enemyLarge_state_attackMelee);
-state_create("Stunned",enemyLarge_state_stun);
+state_create("Stun",enemyLarge_state_stun);
 #endregion
 
 //Set the default state

@@ -20,14 +20,13 @@ else if (instance_exists(obj_enemy_leader)) {
 
 else if (state_timer >= irandom_range(room_speed*2,room_speed*240)) state_switch("Idle");
 
-steering = vector_add(steering, sb_wander(CIRCLE_DISTANCE,CIRCLE_RADIUS,45,1));
+steering = vector_add(steering, sb_wander(CIRCLE_DISTANCE,CIRCLE_RADIUS,ANGLE_CHANGE,1));
 
-steering = vector_add(steering, sb_avoid_collision(obj_obstacle,64,MAX_AVOID_FORCE,3));
-
-steering = vector_add(steering, sb_separation(object_index,50,3));
-steering = vector_add(steering, sb_alignment(object_index,40,2));
-steering = vector_add(steering, sb_queue(object_index, 40, 30));
-
+steering = vector_add(steering, sb_avoid_collision(obj_obstacle,150,MAX_AVOID_FORCE,3));
+steering = vector_add(steering, sb_avoid_collision(obj_enemy_parent,150,MAX_AVOID_FORCE,3));
+steering = vector_add(steering, sb_separation(object_index,30,5));
+steering = vector_add(steering, sb_alignment(object_index,30,3));
+steering = vector_add(steering, sb_queue(object_index, 30, 60));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
 velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);

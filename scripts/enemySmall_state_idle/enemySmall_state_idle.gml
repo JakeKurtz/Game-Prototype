@@ -4,5 +4,5 @@ if(state_new) {
 	image_index = 0;
 }
 
-sprite_index = idle_animations[0];
+sprite_index = idle_animations[1];
 if (state_timer >= irandom_range(room_speed*2,room_speed*25)) state_switch_previous();

@@ -10,7 +10,7 @@ if(state_new) {
 
 WASD_enabled = false;
 
-if (image_index >= 1 && image_index <= 4) {
+if (image_index >= 1 && image_index <= 6) {
 		with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_hitbox)) {
 			image_xscale = other.image_xscale;
 		}
@@ -18,14 +18,14 @@ if (image_index >= 1 && image_index <= 4) {
 
 if (key_attack) {
 	show_debug_message(string(image_index));
-	if (combo == 0 && image_index <= 4) {
+	if (combo == 0 && image_index <= 6) {
 		with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_hitbox)) {
 			image_xscale = other.image_xscale;
 		}
 		image_index = 0; 
 		sprite_index = animations_attack[1]; 
 	} 
-	else if (combo == 1 && image_index <= 4) {
+	else if (combo == 1 && image_index <= 6) {
 		with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_hitbox)) {
 			image_xscale = other.image_xscale;
 		}
@@ -36,4 +36,4 @@ if (key_attack) {
 	combo += 1;
 }
 
-if (image_index+image_speed >= image_number) state_switch("Idle");
+if (image_index+image_speed >= 5) state_switch("Idle");
