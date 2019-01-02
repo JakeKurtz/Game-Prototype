@@ -9,7 +9,8 @@
         "41c90fc7-8356-44f3-9d2b-a4ead35328d0",
         "084cb386-39fc-48e0-b2da-7365e4765df0",
         "902c2212-7bf6-4f6d-ad58-d38b5fa4a71d",
-        "88ab1604-2e67-469b-8d25-a881bb91170b"
+        "88ab1604-2e67-469b-8d25-a881bb91170b",
+        "82ae1151-1cfd-435a-aae2-8ac395564401"
     ],
     "filterType": "GMSprite",
     "folderName": "ZOMBIE",

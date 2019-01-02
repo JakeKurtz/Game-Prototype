@@ -4,6 +4,9 @@
 image_scale = 2;
 flash = 0;
 take_damage = true;
+draw_blood = false
+
+_health = 100;
 
 default_image_speed = 0.5
 image_speed = default_image_speed;
@@ -70,6 +73,7 @@ state_create("Flee",enemySmall_state_flee);
 state_create("Follow",enemySmall_state_follow);
 state_create("Wander",enemySmall_state_wander);
 state_create("Stun",enemySmall_state_stun);
+state_create("Die",enemySmall_state_die);
 #endregion
 
 //Set the default state

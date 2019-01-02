@@ -4,7 +4,7 @@
 take_damage = true;
 flash = 0;
 default_image_speed = 0.5;
-
+_health = 100;
 image_scale = 2;
 
 image_speed = default_image_speed;
@@ -71,6 +71,7 @@ state_create("Idle Attack", enemyLarge_state_idleAttack);
 state_create("Pursue",enemyLarge_state_pursue);
 state_create("Attack",enemyLarge_state_attackMelee);
 state_create("Stun",enemyLarge_state_stun);
+state_create("Die",enemySmall_state_die);
 #endregion
 
 //Set the default state

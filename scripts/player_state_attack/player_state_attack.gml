@@ -30,11 +30,11 @@ if (key_attack) {
 		x_speed += (5 * image_xscale/image_scale) * walk_accel;
 	}
 	
-	alarm[0] = room_speed/2;
+	alarm[0] = room_speed/3;
 	combo += 1;
 }
 
 x_speed = clamp(x_speed,-dash_max,dash_max);
 y_speed = clamp(y_speed,-dash_max,dash_max);
 
-if (image_index+image_speed >= image_number) state_switch("Idle");
+if (image_index+image_speed >= 6) state_switch("Idle");

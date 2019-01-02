@@ -18,7 +18,7 @@ draw_set_alpha(0.25);
 draw_ellipse(x-shadow_width*.5, y+shadow_height*.15+20, x+shadow_width*.5, y-shadow_height*.25+20, false);
 
 draw_self();
-
+/*
 if (flash > 0) {
 	flash -= 0.05;
 	
@@ -31,4 +31,4 @@ if (flash > 0) {
 
 	shader_reset();
 	gpu_set_blendmode(bm_normal);
-}
+}*/

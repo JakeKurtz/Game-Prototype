@@ -11,7 +11,8 @@
         "838789ad-f148-405e-a478-d4dd03f23a60",
         "d1baa17d-29e9-4fd8-a137-6555f723727c",
         "1697fd1f-2e69-4b9d-a04a-970eba3575e4",
-        "bc6e412a-bc56-44ac-9fa4-e04921d49f01"
+        "bc6e412a-bc56-44ac-9fa4-e04921d49f01",
+        "36110967-c2ba-4ae0-a54a-0aefe0fca54a"
     ],
     "filterType": "GMScript",
     "folderName": "SMALL",

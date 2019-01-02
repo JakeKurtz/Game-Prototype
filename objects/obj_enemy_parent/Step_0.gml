@@ -34,7 +34,7 @@ y += velocity[2];
 
 // If the player hits you, flash and switch state to stunned.
 if (place_meeting(x,y,obj_player_hitbox) && take_damage) {
-	flash = 1;	
+	flash = 0.75;	
 	take_damage = false;
 	alarm[0] = 30;
 	state_switch("Stun");
@@ -42,7 +42,11 @@ if (place_meeting(x,y,obj_player_hitbox) && take_damage) {
 
 // If the player hits you, flash and switch state to stunned.
 if (place_meeting(x,y,obj_player) && obj_player.state_name == "Dash") {
-	state_switch("Stun");
+	//state_switch("Stun");
 }
 
 state_execute();
+
+if (_health <= 0) {
+	state_switch("Die");
+}
