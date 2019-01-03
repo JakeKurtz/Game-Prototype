@@ -1,4 +1,3 @@
-# Name Unknown
 ## Gameplay so far
 
 ### Attack with dust particles
