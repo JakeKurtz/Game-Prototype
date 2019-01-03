@@ -1,6 +1,6 @@
 Attack with dust particles
 
-![](attak_and_dust.gif)
+![](attack_and_dust.gif)
 
 Attacking enemies
 
