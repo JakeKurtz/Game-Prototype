@@ -51,6 +51,7 @@ animations_attack = array(spr_player_attack1,
 	                      spr_player_attack2,
 	                      spr_player_attack3,);
 
+instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_footbox);
 state_machine_init();
 
 //Define States

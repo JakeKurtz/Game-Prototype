@@ -5,7 +5,7 @@ shadow_size = 0.8;
 shadow_height = 45*shadow_size; 
 shadow_width = 40*shadow_size;
 
-//draw_set_alpha(0.25);
+draw_set_alpha(0.25);
 draw_ellipse_color(x-shadow_width*.5, y+shadow_height*.15+15, x+shadow_width*.5, y-shadow_height*.25+15, c_black, c_black, false);
 
 //draw_text(20,20,string_hash_to_newline("State: "+string(state_name)+"#X velocity: "+string(velocity[1])+"#Y velocity: "+string(velocity[2])));

@@ -1,5 +1,11 @@
-image_xscale = random_range(0.90, 1.10)*2;
-image_yscale = image_xscale*2;
-image_angle=irandom(359)
-image_index=irandom(image_number-1)
-image_speed = 0;
+/// @description Insert description here
+// You can write your code in this editor
+var how_much_gibs=irandom(2)+3   
+for (var i=0;i<how_much_gibs;i++) { 
+    instance_create_layer(x+(irandom_range(-30, 30)),y+(irandom_range(-30, 30)), "Compatibility_Instances_Depth_0", obj_gibs);
+}
+
+var how_much_blood=irandom(3)+2 
+for (var i=0;i<how_much_blood;i++) { 
+    instance_create_layer(x+(irandom_range(-30, 30)),y+(irandom_range(-30, 30)), "Compatibility_Instances_Depth_0", obj_blood);
+}

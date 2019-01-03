@@ -10,3 +10,4 @@ draw_set_alpha(0.25);
 draw_ellipse(x-shadow_width*.5, y+shadow_height*.15+20, x+shadow_width*.5, y-shadow_height*.25+20, false);
 
 draw_self();
+//draw_rectangle_color(x-(9)*2,y-(-4)*2,x+(8)*2,y+(8)*2,c_red,c_red,c_red,c_red,0);

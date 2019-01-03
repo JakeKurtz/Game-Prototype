@@ -57,7 +57,7 @@ if (place_meeting(x,y+y_speed,obj_solid_nonentity)) {
 y += y_speed;
 
 // TODO : Do the following better. This is me being a lazy fuck. 
-if state_name == "Attack" && ((x_speed >= 4 && x_speed <= 5) || (x_speed <= -4 && x_speed >= -5)) {
+if state_name == "Attack" && (abs(x_speed) >= 4 && abs(x_speed) <= 5) {
 	part_emitter_region(obj_ps.part_system, obj_ps.part_emitter, x-10, x+10, y+15, y+19, ps_shape_rectangle, ps_distr_linear);
 	part_emitter_burst(obj_ps.part_system, obj_ps.part_emitter, obj_ps.part_player_dust, 6);
 	draw_self();

@@ -1,18 +1,18 @@
 {
-    "id": "9739ebde-9e03-48d1-8237-1c4df2e8e312",
+    "id": "ebb16c38-0d0b-4ecd-8616-edb57460b93a",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "obj_gore",
     "eventList": [
         {
-            "id": "5e2db76d-c834-4502-900c-258efd57521b",
+            "id": "05f71a5e-729f-429d-aca5-983b7c0d793c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "9739ebde-9e03-48d1-8237-1c4df2e8e312"
+            "m_owner": "ebb16c38-0d0b-4ecd-8616-edb57460b93a"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -23,45 +23,16 @@
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
     "physicsGroup": 0,
-    "physicsKinematic": true,
+    "physicsKinematic": false,
     "physicsLinearDamping": 0.1,
-    "physicsObject": true,
+    "physicsObject": false,
     "physicsRestitution": 0.1,
-    "physicsSensor": true,
+    "physicsSensor": false,
     "physicsShape": 1,
-    "physicsShapePoints": [
-        {
-            "id": "a9fd3048-1340-4590-b070-022777a68dee",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 0,
-            "y": 0
-        },
-        {
-            "id": "99f4e2cc-ecdc-4892-a1b7-4925550469fb",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 10,
-            "y": 0
-        },
-        {
-            "id": "e8280bad-4ae6-47f2-a1ba-6ed9804daa10",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 10,
-            "y": 7
-        },
-        {
-            "id": "aef3e4b7-0f73-46f0-92ad-d76e7fb3146e",
-            "modelName": "GMPoint",
-            "mvc": "1.0",
-            "x": 0,
-            "y": 7
-        }
-    ],
+    "physicsShapePoints": null,
     "physicsStartAwake": true,
     "properties": null,
-    "solid": true,
-    "spriteId": "82ae1151-1cfd-435a-aae2-8ac395564401",
+    "solid": false,
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

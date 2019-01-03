@@ -34,7 +34,7 @@ y += velocity[2];
 
 // If the player hits you, flash and switch state to stunned.
 if (place_meeting(x,y,obj_player_hitbox) && take_damage) {
-	flash = 0.75;	
+	flash = 1;	
 	take_damage = false;
 	alarm[0] = 30;
 	state_switch("Stun");
