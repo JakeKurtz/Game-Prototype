@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description 
 
 global.camera_shake = false;
 alarm0_time = 2;

@@ -1,11 +1,9 @@
-/// @description  Animation and Movment Controller
-
-// TODO : Make the collsions less clunky
+/// @description  Animation and movment logic
 
 position = vector(x,y);
 velocity = vector(x_speed,y_speed);
 
-#region // MOVEMENT INPUT
+#region // Controls
 
 key_up = keyboard_check(ord("W"));
 key_down = keyboard_check(ord("S"));
@@ -40,7 +38,7 @@ depth = -y;
 if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))
 if (y_speed != 0) y_speed -= (walk_decel * sign(y_speed))
 
-#region // horizontal collision
+#region // Horizontal collision
 if (place_meeting(x+x_speed,y,obj_solid_nonentity)) {
     while(!place_meeting(x+sign(x_speed),y,obj_solid_nonentity)) x += sign(x_speed);
 	if (state_name == "Dash") global.camera_shake = true;
@@ -48,7 +46,7 @@ if (place_meeting(x+x_speed,y,obj_solid_nonentity)) {
 } #endregion
 x += x_speed;
  
-#region // vertical collision
+#region // Vertical collision
 if (place_meeting(x,y+y_speed,obj_solid_nonentity)) {
     while(!place_meeting(x,y+sign(y_speed),obj_solid_nonentity)) y += sign(y_speed);
 	if (state_name == "Dash") global.camera_shake = true;
@@ -56,13 +54,12 @@ if (place_meeting(x,y+y_speed,obj_solid_nonentity)) {
 } #endregion
 y += y_speed;
 
-// TODO : Do the following better. This is me being a lazy fuck. 
+// TODO : Make it work with vertical speed 
+// Dust particle when player comes to a stop
 if state_name == "Attack" && (abs(x_speed) >= 4 && abs(x_speed) <= 5) {
 	part_emitter_region(obj_ps.part_system, obj_ps.part_emitter, x-10, x+10, y+15, y+19, ps_shape_rectangle, ps_distr_linear);
 	part_emitter_burst(obj_ps.part_system, obj_ps.part_emitter, obj_ps.part_player_dust, 6);
 	draw_self();
 }
-
-//if (place_meeting(x,y,obj_enemy_parent) && state_name == "Dash") global.camera_shake = true;
 
 state_execute();

@@ -1,5 +1,7 @@
 /// @description Properties
 
+// TODO : Organize
+
 image_scale = 2;
 default_image_speed = 0.7;
 image_speed = default_image_speed;

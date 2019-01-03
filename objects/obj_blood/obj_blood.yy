@@ -5,13 +5,23 @@
     "name": "obj_blood",
     "eventList": [
         {
-            "id": "a47ae251-27f2-43c2-b470-78ed06ab16d8",
+            "id": "5fb6f5a3-225d-4cc6-beec-7200dbe7a44a",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 77,
+            "eventtype": 8,
+            "m_owner": "83378c75-f0a9-4631-bbef-369b5050aae3"
+        },
+        {
+            "id": "8b721661-0b55-45dd-80f8-3aa6ac7719f1",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 0,
+            "eventtype": 8,
             "m_owner": "83378c75-f0a9-4631-bbef-369b5050aae3"
         }
     ],

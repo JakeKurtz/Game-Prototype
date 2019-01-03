@@ -1,8 +1,10 @@
-/// @description Insert description here
+/// @description
 
+// Follow Player
 x = obj_player.x;
 y = obj_player.y;
 
+// Shake effect
 if global.camera_shake {
 	var ran_x = random_range(-shake,shake);
 	var ran_y = random_range(-shake,shake);

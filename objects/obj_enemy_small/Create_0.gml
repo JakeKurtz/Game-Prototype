@@ -1,5 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Properties
+
+// TODO : Organize this shit
 
 image_scale = 2;
 flash = 0;

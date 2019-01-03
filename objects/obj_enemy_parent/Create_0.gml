@@ -1,6 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-/*
+/// @description Enemy properties skeleton
+
 path = path_add();
 path_patrol = path0;
 
@@ -34,28 +33,13 @@ shadow_height = 45*shadow_size;
 shadow_width = 40*shadow_size;
 
 // Animation arrays
-walk_animations = array(spr_walk_up,
-                        spr_walk_left,
-                        spr_walk_right,
-                        spr_walk_down);
+walk_animations = array();
                  
-attack_animations = array(spr_sword_up,
-	                      spr_sword_left,
-	                      spr_sword_right,
-	                      spr_sword_down);
+attack_animations = array();
 
 state_machine_init();
 
 //Define States
-state_create("Patrol",enemy_state_patrol);
-state_create("Idle",enemy_state_idle);
-state_create("Pursue",enemy_state_pursue);
-state_create("Attack",enemy_state_attack);
-state_create("Flee",enemy_state_flee);
-state_create("Airborn",enemy_state_airborn);
-state_create("Follow",enemy_state_follow);
-state_create("Follow Idle",enemy_state_followIdle);
 
 //Set the default state
-state_init("Follow");
-*/
+//state_init("Follow");

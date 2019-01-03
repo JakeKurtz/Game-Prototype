@@ -1,5 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Scaling to player proportions
+
 image_scale = obj_player.image_scale;
 
 image_xscale = image_xscale*image_scale;

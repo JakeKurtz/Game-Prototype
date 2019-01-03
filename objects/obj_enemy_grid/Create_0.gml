@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description 
 
 var CELL_SIZE = 64;
 
