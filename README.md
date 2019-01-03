@@ -1,4 +1,4 @@
-# Game Prototype
+# Name Unknown
 
 ## Gameplay so far
 
