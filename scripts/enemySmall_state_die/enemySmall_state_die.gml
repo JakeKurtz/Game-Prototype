@@ -7,6 +7,8 @@ if (state_new) {
 }
 
 //if (image_index+image_speed >= image_number) {
-	instance_destroy();
-	instance_create_layer(x,y, "Compatibility_Instances_Depth_0", obj_gore);	
+part_emitter_region(obj_ps.part_system, obj_ps.part_emitter, x-6, x+6, y-3, y+3, ps_shape_rectangle, ps_distr_linear);
+part_emitter_burst(obj_ps.part_system, obj_ps.part_emitter, obj_ps.part_blood2, 5);
+instance_create_layer(x,y, "Compatibility_Instances_Depth_0", obj_gore);	
+instance_destroy();
 //}
