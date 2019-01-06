@@ -6,7 +6,7 @@ image_scale = 2;
 flash = 0;
 take_damage = true;
 draw_blood = false
-
+can_attack = true;
 _health = 100;
 
 default_image_speed = 0.5
@@ -68,7 +68,6 @@ state_machine_init();
 #region //Define States
 state_create("Pursue",enemySmall_state_pursue);
 state_create("Idle",enemySmall_state_idle);
-state_create("Idle Attack", enemySmall_state_idleAttack);
 state_create("Attack",enemySmall_state_attackMelee);
 state_create("Flee",enemySmall_state_flee);
 state_create("Follow",enemySmall_state_follow);

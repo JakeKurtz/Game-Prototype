@@ -16,4 +16,10 @@ else if (dir >= 225 && dir < 270) facing = 3;
 else if (dir >= 270 && dir < 315) facing = 3;
 else facing = 2;
 
-if (image_index+image_speed >= image_number) state_switch("Idle Attack");
+if (distance_to_object(obj_player) > m_attack_range) state_switch("Pursue");
+
+if (image_index+image_speed >= image_number && can_attack) {
+	alarm[1] = irandom_range(30,60);
+	can_attack = false;
+}
+

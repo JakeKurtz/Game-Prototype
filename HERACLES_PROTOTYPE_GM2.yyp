@@ -199,14 +199,6 @@
             }
         },
         {
-            "Key": "1c7185a8-22bf-4a7c-8b32-e664f2989039",
-            "Value": {
-                "id": "5716a21a-8a4a-4d4c-ac4b-71c8fa8ffd74",
-                "resourcePath": "scripts\\enemySmall_state_idleAttack\\enemySmall_state_idleAttack.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "1ca200ec-9a37-4afb-a4fe-88f5ebb08821",
             "Value": {
                 "id": "68946ef8-769a-47fe-904f-1f2e983956ae",
@@ -763,14 +755,6 @@
             "Value": {
                 "id": "37eb1d53-c01e-4afe-b276-83a64fbf1c3b",
                 "resourcePath": "scripts\/sb_path_tofro\/sb_path_tofro.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "761bc7af-17d6-4bbc-a7e5-9f36ec39334d",
-            "Value": {
-                "id": "6c6ee806-41c6-4c9d-9135-7d50fa71608f",
-                "resourcePath": "scripts\\enemyLarge_state_idleAttack\\enemyLarge_state_idleAttack.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1724,7 +1708,6 @@
         "0ecc781e-1ce7-41a5-ba76-5b9a848d0446",
         "d8fb61c0-652f-40bd-ada7-3f1af19fa864",
         "bee96f48-6bf2-40f2-8174-742e30c5a1c8",
-        "1c7185a8-22bf-4a7c-8b32-e664f2989039",
         "838789ad-f148-405e-a478-d4dd03f23a60",
         "d1baa17d-29e9-4fd8-a137-6555f723727c",
         "1697fd1f-2e69-4b9d-a04a-970eba3575e4",
@@ -1734,7 +1717,6 @@
         "5661f4e3-8d33-4bfd-9c99-ecb391d58b19",
         "9f1412da-164b-4f12-898f-e6e60d6afa06",
         "7484fa06-00e0-4e4c-95c3-e7e5bae66514",
-        "761bc7af-17d6-4bbc-a7e5-9f36ec39334d",
         "8fc9195d-e9c0-499e-9139-2b29e1abd790",
         "460ecb43-bd50-478c-bb00-5cf772d4d235"
     ],

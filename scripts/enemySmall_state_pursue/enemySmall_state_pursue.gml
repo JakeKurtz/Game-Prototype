@@ -12,7 +12,7 @@ if (mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 1)) {
 // If enemy gets close enough to player, then get ready to attack.
 if (!(collision_line(x,y,obj_player.x,obj_player.y,obj_solid_nonentity,1,0))) {
 	if (distance_to_object(obj_player) <= m_attack_range) {
-		state_switch("Idle Attack");
+		state_switch("Attack");
 	}
 }
 

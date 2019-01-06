@@ -7,6 +7,7 @@ flash = 0;
 default_image_speed = 0.5;
 _health = 100;
 image_scale = 2;
+can_attack = true;
 
 image_speed = default_image_speed;
 image_xscale = image_xscale*image_scale;
@@ -68,7 +69,6 @@ state_machine_init();
 #region //Define States
 state_create("Patrol",enemyLarge_state_patrol);
 state_create("Idle",enemyLarge_state_idle);
-state_create("Idle Attack", enemyLarge_state_idleAttack);
 state_create("Pursue",enemyLarge_state_pursue);
 state_create("Attack",enemyLarge_state_attackMelee);
 state_create("Stun",enemyLarge_state_stun);
