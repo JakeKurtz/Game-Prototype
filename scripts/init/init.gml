@@ -1,0 +1,1 @@
+global.c_blood_red = make_colour_rgb(192, 16, 0);

@@ -6,6 +6,6 @@ if(state_new) {
 
 sprite_index = idle_animations[0];
 
-if (state_timer >= irandom_range(30,180)) state_switch("Attack");
+if (state_timer >= irandom_range(30,60)) state_switch("Attack");
 
 if (distance_to_object(obj_player) > m_attack_range) state_switch("Pursue");

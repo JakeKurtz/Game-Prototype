@@ -1,7 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+take_damage = true;
+flash = 0;
+default_image_speed = 0.5;
+_health = 100;
 image_scale = 2;
+attack_type = noone;
+can_attack = true;
 
 image_speed = 0.5;
 image_xscale = image_xscale*image_scale;
@@ -17,7 +23,7 @@ flee_range = 150;
 my_path_dir = 1;
 my_path_position = 0;
 facing = 0;
-can_seek = false;
+can_seek = true;
 
 shadow_size = 1;
 shadow_height = 45*shadow_size; 
@@ -33,9 +39,9 @@ SIGHT_RADIUS = 500;
 MAX_SEE_AHEAD = 128;
 
 MAX_SPEED = 4;
-MAX_FORCE = 5;
+MAX_FORCE = 1;
 ARRIVAL_FORCE = 1;
-MAX_AVOID_FORCE = 5;
+MAX_AVOID_FORCE = 0.5;
 #endregion
 
 #region // Steering vectors
@@ -47,27 +53,26 @@ avoidance = vector(0,0);
 #endregion
 
 #region // Animation arrays
-walk_animations = array(spr_enemy,
-                        spr_enemy,
-                        spr_enemy,
-                        spr_enemy);
+idle_animations = array(spr_glad_idle);
+
+walk_animations = array(spr_glad_walk);
                  
-attack_animations = array(spr_enemy,
-	                      spr_enemy,
-	                      spr_enemy,
-	                      spr_enemy);
+attack_animations = array(spr_glad_attack);
 #endregion
 
 state_machine_init();
 
 #region //Define States
-state_create("Patrol",enemy_state_patrol);
-state_create("Idle",enemy_state_idle);
-state_create("Pursue",enemy_state_r_pursue);
-state_create("Ranged Attack",enemy_state_r_attack);
-state_create("Melee Attack",enemy_state_m_attack);
-state_create("Flee",enemy_state_r_flee);
+state_create("Patrol",enemyRanged_state_patrol);
+state_create("Idle",enemyRanged_state_idle);
+state_create("Pursue",enemyRanged_state_pursue);
+state_create("Ranged Attack",enemyRanged_state_attackRanged);
+state_create("Melee Attack",enemyRanged_state_attackMelee);
+state_create("Flee",enemyRanged_state_flee);
+state_create("Stun", enemyRanged_state_stun);
+state_create("Die", enemyRanged_state_die);
+state_create("Follow", enemyRanged_state_follow);
 #endregion
 
 //Set the default state
-state_init("Patrol");
+state_init("Follow");

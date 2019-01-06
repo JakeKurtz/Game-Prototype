@@ -7,8 +7,8 @@ var _leader = argument[0];
 var _leader_behind_dist = argument[1];
 var _sight_radius = argument[2];
 var _weight = argument[3];
-var _force = vector(0,0);
 
+var _force = vector(0,0);
 var _nearest_leader = instance_nearest(x,y,_leader)
 
 if (_nearest_leader != noone) {	

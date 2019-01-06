@@ -2,7 +2,7 @@ if(state_new) {
     velocity[1] = 0;
 	velocity[2] = 0;
 	image_index = 0;
-	sprite_index = attack_animations[irandom_range(0,array_length_1d(attack_animations)-1)];
+	sprite_index = attack_animations[irandom(array_length_1d(attack_animations)-1)];
 }
 
 var dir = point_direction(x,y,obj_player.x,obj_player.y)

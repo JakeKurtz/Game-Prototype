@@ -1,8 +1,8 @@
 {
-    "id": "c24c5f85-8b41-43af-bafa-4922fc516983",
+    "id": "45d5abcd-42eb-48e5-9eaf-b53d11870f31",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "enemyRanged_state_idleAttack",
+    "name": "enemyRanged_state_follow",
     "IsCompatibility": false,
     "IsDnD": false
 }

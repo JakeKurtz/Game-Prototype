@@ -1,13 +1,17 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Draw Shadow and sprite
 
-//shadow_size = 1;
-//shadow_height = 45*shadow_size; 
-//shadow_width = 40*shadow_size;
+shadow_size = 1;
+shadow_height = 8*shadow_size; 
+shadow_width = 20*shadow_size;
 
-//draw_set_colour(c_black);
-//draw_set_alpha(0.25);
-//draw_ellipse(x-shadow_width*.5, y+shadow_height*.15+20, x+shadow_width*.5, y-shadow_height*.25+20, false);
+surface_set_target(obj_surface.surface_shadow);
+gpu_set_fog(true, c_black, 0, 0);
+draw_clear_alpha(c_black,0); // clear surface
+draw_set_alpha(0.75);
+draw_ellipse(x-shadow_width, y-shadow_height+15, x+shadow_width, y+shadow_height+15, false);
+gpu_set_fog(false, c_black, 0, 0);
+surface_reset_target();
+
+draw_surface(obj_surface.surface_shadow,0,0);
 
 draw_self();
-//draw_rectangle_color(x-(9)*2,y-(-4)*2,x+(8)*2,y+(8)*2,c_red,c_red,c_red,c_red,0);

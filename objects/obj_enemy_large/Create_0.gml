@@ -21,7 +21,7 @@ flee_range = 64;
 my_path_dir = 1;
 my_path_position = 0;
 facing = 0;
-can_seek = false;
+can_seek = true;
 
 shadow_size = 1;
 shadow_height = 45*shadow_size; 
@@ -37,9 +37,9 @@ SIGHT_RADIUS = 500;
 MAX_SEE_AHEAD = 128;
 
 MAX_SPEED = 4;
-MAX_FORCE = .5;
+MAX_FORCE = 1;
 ARRIVAL_FORCE = 1;
-MAX_AVOID_FORCE = 5;
+MAX_AVOID_FORCE = 0.5;
 #endregion
 
 #region // Steering vectors

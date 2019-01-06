@@ -1,11 +1,11 @@
 if(state_new) {
     image_speed = 0;
-    image_index = 2;
+    image_index = 1;
 	state_x_dir = (-key_left + key_right);
 	state_y_dir = (-key_up + key_down);
 }
 
-WASD_enabled = false;
+//WASD_enabled = false;
 
 x_speed += state_x_dir * dash_accel;
 y_speed += state_y_dir * dash_accel;
