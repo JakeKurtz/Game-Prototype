@@ -15,13 +15,15 @@ surface_reset_target();
 draw_surface(obj_surface.surface_shadow,0,0);
 
 draw_self();
+/*
+mp_grid_draw(global.grid);
 
 //draw_sprite_ext(spr_arrow,0,x,y,2,2,vector_direction(velocity),c_white,1);
 
-//if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path_patrol, 0), path_get_point_y(path_patrol, 0), 1) && can_seek) {
-//		draw_set_color(c_white);
-//		draw_path(path,x,y,1);
-//}
+if (mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 1) && can_seek) {
+		draw_set_color(c_white);
+		draw_path(path,x,y,1);
+}*/
 
 // Flash red when hit
 if (flash > 0) {
