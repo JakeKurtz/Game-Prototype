@@ -1,12 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+aggressive = false;
 take_damage = true;
 flash = 0;
 default_image_speed = 0.5;
-_health = 100;
-image_scale = 2;
-attack_type = noone;
+_health = 50;
+image_scale = global.image_scale;
 can_attack = true;
 
 image_speed = 0.5;
@@ -17,8 +16,8 @@ path = path_add();
 path_patrol = path0;
 
 r_attack_range = 250;
-m_attack_range =32;
-flee_range = 150;
+m_attack_range = 5;
+flee_range = 100;
 
 my_path_dir = 1;
 my_path_position = 0;

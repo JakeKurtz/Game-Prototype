@@ -18,19 +18,22 @@ if (obj_nearest != noone) {
 		if (mp_grid_path(global.grid, path, x, y, obj_nearest.x, obj_nearest.y, 1)) {
 			steering = vector_add(steering, sb_path_pursue(path,32,1,1.2));
 		}
-	}
-	// Otherwise just use the normal steering.
-	else {
+	} else {
+		// Otherwise just use the normal steering.
+		MAX_SPEED = obj_nearest.MAX_SPEED;
 		steering = vector_add(steering, sb_follow_leader(obj_enemy_leader, 15, 32, 1));	
 	}
 	//MAX_SPEED = obj_nearest.MAX_SPEED;	
 	// if the dude you're following isn't too far, and the player is in range, then attack.
-	if (distance_to_object(obj_player) <= 128 && distance_to_object(obj_nearest) < flee_range) {
-		state_switch("Pursue");
-	} 
-	//
-	else if (distance_to_object(obj_player) <= 128 && distance_to_object(obj_nearest) >= flee_range) {
-		//state_switch("Flee");
+	//if (distance_to_object(obj_player) <= 128 && distance_to_object(obj_nearest) < flee_range) {
+	//	state_switch("Pursue");
+	//}
+	// If the enemey spots the player, change to pursue state.
+	if (!(collision_line(x,y,obj_player.x,obj_player.y,obj_solid_nonentity,1,0)) && distance_to_object(obj_player) <= SIGHT_RADIUS) {
+		//velocity[1] = 0;
+		//velocity[2] = 0;
+		//sprite_index = spr_minotaur_taunt;
+		state_switch("Pursue");	
 	}
 // If the leader dies, just wander.
 } else state_switch("Patrol");

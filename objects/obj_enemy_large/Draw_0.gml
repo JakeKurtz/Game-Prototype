@@ -8,7 +8,7 @@ surface_set_target(obj_surface.surface_shadow);
 gpu_set_fog(true, c_black, 0, 0);
 draw_clear_alpha(c_black,0); // clear surface
 draw_set_alpha(0.75);
-draw_ellipse(x-shadow_width, y-shadow_height+15, x+shadow_width, y+shadow_height+15, false);
+draw_ellipse(x-shadow_width, y-shadow_height+30, x+shadow_width, y+shadow_height+30, false);
 gpu_set_fog(false, c_black, 0, 0);
 surface_reset_target();
 

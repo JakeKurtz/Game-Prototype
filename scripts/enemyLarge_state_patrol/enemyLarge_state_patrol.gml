@@ -11,7 +11,7 @@ sprite_index = walk_animations[0];
 
 // Seeks the path that it needs to follow.
 if (mp_grid_path(global.grid, path, x, y, path_get_point_x(path_patrol, 0), path_get_point_y(path_patrol, 0), 1) && can_seek) {
-		steering = vector_add(steering, sb_path_pursue(path,32,1,0.5));
+	steering = vector_add(steering, sb_path_pursue(path,32,1,0.5));
 }
 
 // Once it's reached the start of the path, it starts its patrol.

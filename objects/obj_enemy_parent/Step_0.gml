@@ -50,7 +50,7 @@ if (place_meeting(x,y,obj_player_hitbox) && take_damage) {
 	flash = 1;	
 	take_damage = false;
 	alarm[0] = 30;
-	_health -= 100;
+	_health -= 25;
 	if (state_name != "Attack") state_switch("Stun");
 }
 

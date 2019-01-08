@@ -1,6 +1,6 @@
 /// @description 
 
-var CELL_SIZE = 64;
+var CELL_SIZE = 32;
 
 var hcells = room_width div CELL_SIZE;
 var vcells = room_height div CELL_SIZE;

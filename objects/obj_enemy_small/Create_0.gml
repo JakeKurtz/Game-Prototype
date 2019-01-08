@@ -2,12 +2,14 @@
 
 // TODO : Organize this shit
 
-image_scale = 2;
+take_damage = true;
+aggressive = false;
+image_scale = global.image_scale;
 flash = 0;
 take_damage = true;
 draw_blood = false
 can_attack = true;
-_health = 100;
+_health = 25;
 
 default_image_speed = 0.5
 image_speed = default_image_speed;
@@ -17,7 +19,7 @@ image_yscale = image_yscale*image_scale;
 path = path_add();
 path_patrol = path0;
 
-m_attack_range = 1;
+m_attack_range = 5;
 r_attack_range = 32;
 flee_range = 200;
 

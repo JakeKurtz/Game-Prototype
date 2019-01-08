@@ -1,4 +1,5 @@
 if (state_new) {
+	aggressive = true;
     MAX_SPEED = 4;
 	image_index = 0;
 	attack_type = noone;
@@ -14,12 +15,14 @@ if (mp_grid_path(global.grid, path, x, y, obj_player.x, obj_player.y, 1)) {
 // Otherwise, if the player gets any closer, it trys to run away.
 if (!(collision_line(x,y,obj_player.x,obj_player.y,obj_solid_nonentity,1,0))) {
 	if (distance_to_object(obj_player) <= r_attack_range && distance_to_object(obj_player) > flee_range) {
-		state_switch("Ranged Attack");
+		if can_attack state_switch("Ranged Attack");
+		else state_switch("Idle");
 	} else if (distance_to_object(obj_player) <= flee_range && distance_to_object(obj_player) > m_attack_range) {
 		state_switch("Flee");
 	} else if (distance_to_object(obj_player) <= m_attack_range) { 
-		state_switch("Melee Attack");
-	} else state_switch("Pursue");
+		if can_attack state_switch("Melee Attack");
+		else state_switch("Idle");
+	}
 }
 
 steering = vector_add(steering, sb_avoid_collision(obj_obstacle,50,MAX_AVOID_FORCE,2));

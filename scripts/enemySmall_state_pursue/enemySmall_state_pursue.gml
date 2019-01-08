@@ -1,4 +1,5 @@
 if (state_new) {
+	aggressive = true;
     MAX_SPEED = 0.7;
 	image_index = 0;
 }

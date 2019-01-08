@@ -3,10 +3,11 @@
 // TODO : Organize this shit
 
 take_damage = true;
+aggressive = false;
 flash = 0;
 default_image_speed = 0.5;
-_health = 100;
-image_scale = 2;
+_health = 150;
+image_scale = global.image_scale;
 can_attack = true;
 
 image_speed = default_image_speed;
@@ -37,7 +38,7 @@ CIRCLE_RADIUS = 8;
 SIGHT_RADIUS = 500;
 MAX_SEE_AHEAD = 128;
 
-MAX_SPEED = 4;
+MAX_SPEED = 3;
 MAX_FORCE = 1;
 ARRIVAL_FORCE = 1;
 MAX_AVOID_FORCE = 0.5;

@@ -1,5 +1,5 @@
 if (state_new) {
-    MAX_SPEED = 4;
+    MAX_SPEED = 5;
 	image_index = 0;
 }
 

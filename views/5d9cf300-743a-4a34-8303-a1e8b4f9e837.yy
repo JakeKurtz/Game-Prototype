@@ -6,7 +6,7 @@
     "children": [
         
     ],
-    "filterType": "root",
+    "filterType": "user",
     "folderName": "Default2",
     "isDefaultView": false,
     "localisedFolderName": ""

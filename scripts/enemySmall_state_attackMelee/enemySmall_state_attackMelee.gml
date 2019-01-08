@@ -1,25 +1,33 @@
 if(state_new) {
+	can_attack = false;
     velocity[1] = 0;
 	velocity[2] = 0;
 	image_index = 0;
 	sprite_index = attack_animations[irandom_range(0,array_length_1d(attack_animations)-1)];
 }
 
-var dir = point_direction(x,y,obj_player.x,obj_player.y)
+var min_frame; 
+var max_frame;
 
-if (dir >= 0 && dir < 45) facing = 2;
-else if (dir >= 45 && dir < 90) facing = 0;
-else if (dir >= 90 && dir < 135) facing = 0;
-else if (dir >= 135 && dir < 180) facing = 1;
-else if (dir >= 180 && dir < 225) facing = 1;
-else if (dir >= 225 && dir < 270) facing = 3;
-else if (dir >= 270 && dir < 315) facing = 3;
-else facing = 2;
+// The frames when the hitbox should be spawned in.
+if sprite_index == attack_animations[0] {
+	min_frame = 3;
+	max_frame = 4;
+} else if sprite_index == attack_animations[1] {
+	min_frame = 3;
+	max_frame = 4;
+}
+	
+// Spawn hit box
+if (image_index >= min_frame && image_index <= max_frame) {
+	with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_enemySmall_hitbox)) {
+		image_xscale = other.image_xscale;
+	}
+}
 
-if (distance_to_object(obj_player) > m_attack_range) state_switch("Pursue");
-
-if (image_index+image_speed >= image_number && can_attack) {
-	alarm[1] = irandom_range(30,60);
-	can_attack = false;
+// Paces out attacks
+if (image_index+image_speed >= image_number) {
+	alarm[1] = irandom_range(30, 60);
+	state_switch("Idle");
 }
 

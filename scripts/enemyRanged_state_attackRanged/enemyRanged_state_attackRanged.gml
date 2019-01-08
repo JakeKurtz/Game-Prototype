@@ -3,27 +3,30 @@ if(state_new) {
 	velocity[2] = 0;
 	image_index = 0;
 	sprite_index = attack_animations[irandom(array_length_1d(attack_animations)-1)];
+	with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_fireBall)) {
+		image_xscale = other.image_xscale;
+		image_yscale = other.image_yscale;
+	}
+	can_attack = false;
 }
 
-var _distance_to_player = distance_to_object(obj_player);
-var dir = point_direction(x,y,obj_player.x,obj_player.y)
+var min_frame; 
+var max_frame;
 
-if (dir >= 0 && dir < 45) facing = 2;
-else if (dir >= 45 && dir < 90) facing = 0;
-else if (dir >= 90 && dir < 135) facing = 0;
-else if (dir >= 135 && dir < 180) facing = 1;
-else if (dir >= 180 && dir < 225) facing = 1;
-else if (dir >= 225 && dir < 270) facing = 3;
-else if (dir >= 270 && dir < 315) facing = 3;
-else facing = 2;
+// Makes sure the enemy is facing the player.
+var vector_dir = point_direction(x,y,obj_player.x,obj_player.y)
+	
+if ((vector_dir >= 0 && vector_dir <= 70) || (vector_dir >= 290 && vector_dir <= 360)) image_xscale = image_scale;
+else if (vector_dir >= 110 && vector_dir <= 250) image_xscale = -image_scale;
 
-if (_distance_to_player <= flee_range && _distance_to_player > m_attack_range) {
-	state_switch("Flee");
-} else if (_distance_to_player <= m_attack_range) { 
-	state_switch("Melee Attack");
-} else if (_distance_to_player > r_attack_range) state_switch("Pursue");
+// The frames when the hitbox should be spawned in.
+if sprite_index == attack_animations[0] {
+	min_frame = 1;
+	max_frame = 2;
+}
 
-if (image_index+image_speed >= image_number && can_attack) {
-	alarm[1] = irandom_range(30,60);
-	can_attack = false;
+// Paces out attacks
+if (image_index+image_speed >= image_number) {
+	alarm[1] = irandom_range(60, 240);
+	state_switch("Idle");
 }

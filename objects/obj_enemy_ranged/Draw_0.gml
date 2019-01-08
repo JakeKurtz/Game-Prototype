@@ -1,10 +1,5 @@
 /// @description
 
-draw_text(20,20,string_hash_to_newline("State: "+string(state_name)
-              +"#x_speed: "+string(velocity[1])
-			  +"#y_speed: "+string(velocity[2]))
-         );
-
 shadow_size = 1;
 shadow_height = 8*shadow_size; 
 shadow_width = 18*shadow_size;
@@ -13,11 +8,11 @@ surface_set_target(obj_surface.surface_shadow);
 gpu_set_fog(true, c_black, 0, 0);
 draw_clear_alpha(c_black,0); // clear surface
 draw_set_alpha(0.75);
-draw_ellipse(x-shadow_width, y-shadow_height+15, x+shadow_width, y+shadow_height+15, false);
+draw_ellipse(x-shadow_width, y-shadow_height+19, x+shadow_width, y+shadow_height+19, false);
 gpu_set_fog(false, c_black, 0, 0);
 surface_reset_target();
 
-//draw_surface(obj_surface.surface_shadow,0,0);
+draw_surface(obj_surface.surface_shadow,0,0);
 
 draw_self();
 

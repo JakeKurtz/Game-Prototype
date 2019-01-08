@@ -4,7 +4,7 @@ if(state_new) {
 	
 	// Getting direction with respect to the player
 	var _point_to_player = vector((obj_player.x - x),(obj_player.y - y));
-	velocity = vector_scaler(_point_to_player, -3);
+	velocity = vector_mulr(vector_scaler(_point_to_player, -1), 3);
 	// Blood flys towards player
 	//part_type_direction(obj_ps.part_blood2,vector_direction(_point_to_player),vector_direction(_point_to_player)+45,0,0);
 	//part_type_speed(obj_ps.part_blood2,(vector_len(obj_player.velocity)/3)-1,(vector_len(obj_player.velocity)/3)+1,0,0);
