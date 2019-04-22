@@ -35,7 +35,7 @@ part_type_size(part_fire, 2, 4, -0.01, 0);
 part_type_sprite(part_fire, spr_fire,1,1,0);
 part_type_life(part_fire, 15, 30);
 part_type_gravity(part_fire, 0.005, 90);
-part_type_blend(part_fire,1);
+//part_type_blend(part_fire,1);
 
 // Smoke
 part_smoke = part_type_create();

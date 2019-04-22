@@ -7,7 +7,7 @@ if !surface_exists(surface_gore) {
 	draw_clear_alpha(c_black,0); // clear surface
 	surface_reset_target();
 } else {
-	draw_surface(surface_gore,0,0);
+	draw_surface_ext(surface_gore,0,0,1,1,0,c_white,1);
 }
 
 if !surface_exists(surface_shadow) {
