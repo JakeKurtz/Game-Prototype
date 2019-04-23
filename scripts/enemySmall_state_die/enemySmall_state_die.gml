@@ -10,7 +10,7 @@ if (state_new) {
 
 // spawn some health maybe
 if (irandom_range(1,1) == 1) {
-	for (var i = 0; i < irandom_range(1,2); ++i) {
+	for (var i = 0; i < 1; ++i) {
 	    instance_create_layer(x,y, "Compatibility_Instances_Depth_0", obj_hp_5);
 	}
 }

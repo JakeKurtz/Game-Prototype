@@ -5,6 +5,8 @@ if can_collide {
 	with obj_player {
 		_health += 5;
 	}
-
-	instance_destroy(self);
+	
+	sprite_index = spr_sparkle;
+	image_speed = 2;
+	can_collide = false;
 }

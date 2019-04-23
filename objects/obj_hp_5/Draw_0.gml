@@ -14,9 +14,11 @@ surface_reset_target();
 
 draw_surface(obj_surface.surface_shadow,0,0);
 
+y+=z;
 draw_self();
 
 // Flash white
+
 flash -= flash_rate;
 gpu_set_blendmode(bm_add);
 shader_set(shd_flash);
@@ -26,5 +28,7 @@ shader_set_uniform_f(shd_alpha, flash);
 draw_self();
 shader_reset();
 gpu_set_blendmode(bm_normal);
+
+y-=z;
 
 if (flash <= 0 || flash >= 1) flash_rate *= -1;

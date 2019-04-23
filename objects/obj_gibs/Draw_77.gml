@@ -1,6 +1,6 @@
 /// @description Clean up
 
-if (vector_len(velocity) == 0) {
+if (vector_len(velocity) == 0 && z_velocity == 0) {
 	surface_set_target(obj_surface.surface_gore);
 	draw_self();
 	surface_reset_target();
