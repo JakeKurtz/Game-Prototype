@@ -19,6 +19,7 @@ if (!(collision_line(x,y,obj_player.x,obj_player.y,obj_solid_nonentity,1,0))) {
 
 steering = vector_add(steering, sb_avoid_collision(obj_obstacle,150,MAX_AVOID_FORCE,3));
 steering = vector_add(steering, sb_avoid_collision(obj_enemy_parent,150,MAX_AVOID_FORCE,3));
+
 steering = vector_add(steering, sb_separation(object_index,30,5));
 steering = vector_add(steering, sb_alignment(object_index,30,2));
 steering = vector_add(steering, sb_cohesion(object_index,30,1));

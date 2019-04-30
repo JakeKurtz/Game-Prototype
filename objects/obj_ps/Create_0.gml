@@ -31,7 +31,7 @@ part_type_gravity(part_blood2, 0.1, 270);
 part_fire = part_type_create();
 part_type_orientation(part_fire,0,359,0,0,0);
 part_type_colour3(part_fire, c_yellow, c_red, c_ltgray);
-part_type_size(part_fire, 2, 4, -0.01, 0);
+part_type_size(part_fire, 1, 3, -0.01, 0);
 part_type_sprite(part_fire, spr_fire,1,1,0);
 part_type_life(part_fire, 15, 30);
 part_type_gravity(part_fire, 0.005, 90);

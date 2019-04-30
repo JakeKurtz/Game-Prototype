@@ -1,18 +1,8 @@
-/// @description
+/// @description Insert description here
+// You can write your code in this editor
 
-shadow_size = 1;
-shadow_height = 4*shadow_size; 
-shadow_width = 9*shadow_size;
-
-surface_set_target(obj_surface.surface_shadow);
-gpu_set_fog(true, c_black, 0, 0);
-draw_clear_alpha(c_black,0); // clear surface
-draw_set_alpha(0.75);
-draw_ellipse(x-shadow_width, y-shadow_height+9, x+shadow_width, y+shadow_height+9, false);
-gpu_set_fog(false, c_black, 0, 0);
-surface_reset_target();
-
-draw_surface(obj_surface.surface_shadow,0,0);
+// Inherit the parent event
+event_inherited();
 
 y+=z;
 draw_self();

@@ -1,21 +1,11 @@
 /// @description Properties
 
-// TODO : Organize this shit
-
+event_inherited();
 take_damage = true;
 aggressive = false;
 flash = 0;
-default_image_speed = 0.5;
 _health = 150;
-image_scale = global.image_scale;
 can_attack = true;
-
-image_speed = default_image_speed;
-image_xscale = image_xscale*image_scale;
-image_yscale = image_yscale*image_scale;
-
-path = path_add();
-path_patrol = path0;
 
 m_attack_range = 5;
 flee_range = 64;
@@ -25,31 +15,13 @@ my_path_position = 0;
 facing = 0;
 can_seek = true;
 
-shadow_size = 1;
-shadow_height = 45*shadow_size; 
-shadow_width = 40*shadow_size;
-
 #region // Steering constants
 MASS = 5;
-ANGLE_CHANGE = 0.25;
-CIRCLE_DISTANCE = 2;
-CIRCLE_RADIUS = 8;
-
-SIGHT_RADIUS = 500;
-MAX_SEE_AHEAD = 128;
 
 MAX_SPEED = 3;
 MAX_FORCE = 1;
 ARRIVAL_FORCE = 1;
 MAX_AVOID_FORCE = 0.5;
-#endregion
-
-#region // Steering vectors
-position = vector(x,y);
-steering = vector(0,0);
-velocity = vector(0,0);
-desired_velocity = vector(0,0);
-avoidance = vector(0,0);
 #endregion
 
 #region // Animation arrays
@@ -64,8 +36,6 @@ attack_animations = array(spr_minotaur_attack1,
 	                      spr_minotaur_attack2,
 	                      spr_minotaur_attack3);
 #endregion
-
-state_machine_init();
 
 #region //Define States
 state_create("Patrol",enemyLarge_state_patrol);
