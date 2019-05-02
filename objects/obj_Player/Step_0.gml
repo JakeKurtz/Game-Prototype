@@ -32,8 +32,6 @@ if WASD_enabled {
 if (key_left) image_xscale = -image_scale;
 else if (key_right) image_xscale = image_scale;
 
-show_debug_message(image_xscale);
-
 depth = -y;
 
 // Decelerating movement

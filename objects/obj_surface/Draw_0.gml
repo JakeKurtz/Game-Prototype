@@ -16,6 +16,6 @@ if !surface_exists(surface_shadow) {
 	draw_clear_alpha(c_black,0); // clear surface
 	surface_reset_target();
 } else {
-	//draw_surface(surface_shadow,0,0);
+	draw_surface(surface_shadow,0,0);
 }
 
