@@ -1,6 +1,7 @@
 /// @description Properties
 
 event_inherited();
+
 take_damage = true;
 aggressive = false;
 flash = 0;
@@ -18,7 +19,7 @@ can_seek = true;
 #region // Steering constants
 MASS = 5;
 
-MAX_SPEED = 3;
+MAX_SPEED = 2;
 MAX_FORCE = 1;
 ARRIVAL_FORCE = 1;
 MAX_AVOID_FORCE = 0.5;
@@ -38,7 +39,7 @@ attack_animations = array(spr_minotaur_attack1,
 #endregion
 
 #region //Define States
-state_create("Patrol",enemyLarge_state_patrol);
+state_create("Patrol",enemy_state_patrol);
 state_create("Idle",enemyLarge_state_idle);
 state_create("Pursue",enemyLarge_state_pursue);
 state_create("Attack",enemyLarge_state_attackMelee);

@@ -1,8 +1,8 @@
 {
-    "id": "236fdec8-6dc2-4c67-94e2-9ea7fd3bfb9c",
+    "id": "71831207-bf0f-4906-8fe1-5c8977d61bc6",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "enemyRanged_state_patrol",
+    "name": "_enemy_state_patrol",
     "IsCompatibility": false,
     "IsDnD": false
 }

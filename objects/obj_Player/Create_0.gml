@@ -19,11 +19,11 @@ combo_stream = "";
 command_list = ds_list_create();
 combo = 0;
 
-walk_max = 8;
+walk_max = 5;
 walk_accel = 1.5;
 walk_decel = 0.5;
 
-dash_max = 20;
+dash_max = 10;
 dash_accel = 5;
 dash_decel = 0.5;
 

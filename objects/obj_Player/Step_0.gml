@@ -20,7 +20,7 @@ key_attack = (key_atk_light || key_atk_hard);
 #region // Getting direction of player
 if WASD_enabled {	
 	if key_up                  facing = 0;
-	if key_left               facing = 1;
+	if key_left                facing = 1;
 	if key_right               facing = 2;
 	if key_down                facing = 3;
 	if (key_up && key_left)    facing = 0;

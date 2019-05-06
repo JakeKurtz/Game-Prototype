@@ -15,7 +15,7 @@ z_velocity += grav;
 // z collision
 if(z>0) {
 	z = 0; 
-	z_velocity *= -.6;
+	z_velocity *= -.7;
 	if (abs(z_velocity)) <= 2 then z_velocity = 0;
 }
 

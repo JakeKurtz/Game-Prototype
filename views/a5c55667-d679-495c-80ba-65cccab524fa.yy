@@ -12,7 +12,8 @@
         "84bd26f1-9834-42b5-934c-1bdadc625a9f",
         "2dac5daf-2d4d-4bb3-8516-52aa39b494df",
         "cb7c5a1d-99b4-410d-b5b1-1350ca07722d",
-        "45d5abcd-42eb-48e5-9eaf-b53d11870f31"
+        "45d5abcd-42eb-48e5-9eaf-b53d11870f31",
+        "6771a43d-eb24-4d92-84c5-90ef1b2a7273"
     ],
     "filterType": "GMScript",
     "folderName": "RANGED",

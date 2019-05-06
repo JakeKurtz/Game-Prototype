@@ -1,5 +1,5 @@
 {
-    "id": "71831207-bf0f-4906-8fe1-5c8977d61bc6",
+    "id": "236fdec8-6dc2-4c67-94e2-9ea7fd3bfb9c",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "enemy_state_patrol",

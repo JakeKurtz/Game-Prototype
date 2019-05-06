@@ -9,9 +9,9 @@ flash = 0;
 _health = 50;
 can_attack = true;
 
-r_attack_range = 250;
+r_attack_range = 100;
 m_attack_range = 5;
-flee_range = 100;
+flee_range = 50;
 
 my_path_position = 0;
 
@@ -31,7 +31,7 @@ attack_animations = array(spr_imp_attack_r);
 #endregion
 
 #region //Define States
-state_create("Patrol",enemyRanged_state_patrol);
+state_create("Patrol",enemy_state_patrol);
 state_create("Idle",enemyRanged_state_idle);
 state_create("Pursue",enemyRanged_state_pursue);
 state_create("Ranged Attack",enemyRanged_state_attackRanged);
@@ -40,7 +40,8 @@ state_create("Flee",enemyRanged_state_flee);
 state_create("Stun", enemyRanged_state_stun);
 state_create("Die", enemyRanged_state_die);
 state_create("Follow", enemyRanged_state_follow);
+state_create("Wander", enemyRanged_state_wander)
 #endregion
 
 //Set the default state
-state_init("Follow");
+state_init("Wander");

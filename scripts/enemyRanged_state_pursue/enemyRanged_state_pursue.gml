@@ -1,6 +1,6 @@
 if (state_new) {
 	aggressive = true;
-    MAX_SPEED = 4;
+    MAX_SPEED = 3;
 	image_index = 0;
 	attack_type = noone;
 }

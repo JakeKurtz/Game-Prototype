@@ -5,11 +5,11 @@ aggressive = false;
 take_damage = true;
 draw_blood = false
 can_attack = true;
-_health = 25;
+_health = irandom_range(25,100);
 
-m_attack_range = 1;
+m_attack_range = 0;
 r_attack_range = 32;
-flee_range = 200;
+flee_range = 100;
 
 my_path_position = 0;
 

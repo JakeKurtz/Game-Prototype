@@ -1,5 +1,5 @@
 /// @description 
-
+flash = 1;
+flash_rate = 0.05;
 depth = -1;
-
-script = ham_activate_vertex;
+script = clique_activate_vertex;

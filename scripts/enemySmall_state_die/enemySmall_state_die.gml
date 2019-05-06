@@ -9,8 +9,8 @@ if (state_new) {
 //if (image_index+image_speed >= image_number) {
 
 // spawn some health maybe
-if (irandom_range(1,1) == 1) {
-	for (var i = 0; i < 2; ++i) {
+if (irandom_range(1,15) == 1) {
+	for (var i = 0; i < irandom_range(1,3); ++i) {
 	    instance_create_layer(x,y, "Compatibility_Instances_Depth_0", obj_hp_5);
 	}
 }
