@@ -1,5 +1,8 @@
-///sb_separation(object, radius, weight)
-///Return vector2 for separating from given objects within set radius
+///@function sb_separation
+///@arg object
+///@arg radius
+///@arg weight
+///@ret vector2 for separating from given objects within set radius
 ///Uses collision_circle_list from GMLscripts.com
 
 var _sep_obj = argument[0];

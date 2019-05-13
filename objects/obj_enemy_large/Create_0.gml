@@ -9,7 +9,6 @@ _health = 150;
 can_attack = true;
 
 m_attack_range = 5;
-flee_range = 64;
 
 my_path_dir = 1;
 my_path_position = 0;
@@ -19,7 +18,7 @@ can_seek = true;
 #region // Steering constants
 MASS = 5;
 
-MAX_SPEED = 2;
+SPEED = 2;
 MAX_FORCE = 1;
 ARRIVAL_FORCE = 1;
 MAX_AVOID_FORCE = 0.5;
@@ -36,15 +35,20 @@ walk_animations = array(spr_minotaur_walk);
 attack_animations = array(spr_minotaur_attack1,
 	                      spr_minotaur_attack2,
 	                      spr_minotaur_attack3);
+						  
+ds_map_add(hitbox_range, spr_minotaur_attack1, vector(1,2));
+ds_map_add(hitbox_range, spr_minotaur_attack2, vector(1,2));
+ds_map_add(hitbox_range, spr_minotaur_attack3, vector(3,6));
+						  
 #endregion
 
 #region //Define States
-state_create("Patrol",enemy_state_patrol);
-state_create("Idle",enemyLarge_state_idle);
-state_create("Pursue",enemyLarge_state_pursue);
-state_create("Attack",enemyLarge_state_attackMelee);
-state_create("Stun",enemyLarge_state_stun);
-state_create("Die",enemySmall_state_die);
+state_create("Patrol",e_state_patrol);
+state_create("Idle",e_state_idle);
+state_create("Pursue",e_state_pursue);
+state_create("Attack",e_state_attackMelee);
+state_create("Stun",e_state_stun);
+state_create("Die",e_state_die);
 #endregion
 
 //Set the default state

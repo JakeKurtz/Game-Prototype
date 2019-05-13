@@ -1,48 +1,47 @@
 /// @description Properties
 event_inherited();
+
+obj_e_hitbox = obj_enemySmall_hitbox;
 take_damage = true;
 aggressive = false;
 take_damage = true;
-draw_blood = false
+draw_blood = false;
 can_attack = true;
 _health = irandom_range(25,100);
 
 m_attack_range = 0;
-r_attack_range = 32;
-flee_range = 100;
-
 my_path_position = 0;
 
+speed_flee = 0.5;
+speed_follow = 0.5;
+speed_patrol = 0.5;
+speed_pursue = 0.5;
+speed_wander = 0.5;
+
 #region // Steering constants
-MASS = 5;
-ANGLE_CHANGE = 0.5;
-CIRCLE_DISTANCE = 100;
+MASS = 32;
+ANGLE_CHANGE = 0.25;
+CIRCLE_DISTANCE = 128;
 CIRCLE_RADIUS = 25;
 
-MAX_SPEED = 2;
-MAX_FORCE = 0.5;
-MAX_AVOID_FORCE = 5;
+SPEED = 0.5;
+MAX_FORCE = 1;
+MAX_AVOID_FORCE = 0.25;
 #endregion
 
 #region // Animation arrays
 
-idle_animations = array(spr_zombie_idle2,spr_zombie_f_idle);
+idle_animations = array(spr_zombie_idle2,
+						spr_zombie_f_idle);
 
 walk_animations = array(spr_zombie_walk);
                  
 attack_animations = array(spr_zombie_attack1,
 	                      spr_zombie_attack2);
-#endregion
+						  
+ds_map_add(hitbox_range, spr_zombie_attack1, vector(3,4));
+ds_map_add(hitbox_range, spr_zombie_attack2, vector(3,4));
 
-#region //Define States
-state_create("Pursue",enemySmall_state_pursue);
-state_create("Idle",enemySmall_state_idle);
-state_create("Attack",enemySmall_state_attackMelee);
-state_create("Flee",enemySmall_state_flee);
-state_create("Follow",enemySmall_state_follow);
-state_create("Wander",enemySmall_state_wander);
-state_create("Stun",enemySmall_state_stun);
-state_create("Die",enemySmall_state_die);
 #endregion
 
 //Set the default state

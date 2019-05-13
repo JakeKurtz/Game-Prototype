@@ -3,6 +3,7 @@
 
 event_inherited();
 
+obj_e_hitbox = obj_enemyRanged_hitbox;
 aggressive = false;
 take_damage = true;
 flash = 0;
@@ -15,32 +16,29 @@ flee_range = 50;
 
 my_path_position = 0;
 
-#region // Steering constants
-MASS = 5;
+speed_flee = 2.5;
+speed_follow = 1;
+speed_patrol = 1;
+speed_pursue = 2.5;
+speed_wander = 1;
 
+#region // Steering constants
+
+MASS = 5;
 MAX_FORCE = 1;
 MAX_AVOID_FORCE = 0.5;
+
 #endregion
 
-#region // Animation arrays
+#region // Animation arrays and hitbox ranges
 idle_animations = array(spr_imp_idle1);
 
 walk_animations = array(spr_imp_walk);
                  
 attack_animations = array(spr_imp_attack_r);
-#endregion
 
-#region //Define States
-state_create("Patrol",enemy_state_patrol);
-state_create("Idle",enemyRanged_state_idle);
-state_create("Pursue",enemyRanged_state_pursue);
-state_create("Ranged Attack",enemyRanged_state_attackRanged);
-state_create("Melee Attack",enemyRanged_state_attackMelee);
-state_create("Flee",enemyRanged_state_flee);
-state_create("Stun", enemyRanged_state_stun);
-state_create("Die", enemyRanged_state_die);
-state_create("Follow", enemyRanged_state_follow);
-state_create("Wander", enemyRanged_state_wander)
+ds_map_add(hitbox_range, spr_imp_attack_r, vector(3,4));
+
 #endregion
 
 //Set the default state

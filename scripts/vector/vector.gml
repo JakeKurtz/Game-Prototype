@@ -1,9 +1,7 @@
-/*
--- Creates a 2D vector
--- @ param argument0 First value of vector
--- @ param argument1 Second value of vector
--- @ return v 
-*/
+///@function vector Creates a 2D vector
+///@arg v1 First value of vector 
+///@arg v2 Second value of vector
+///@ret vector
 
 var v;
 v[0] = 2;

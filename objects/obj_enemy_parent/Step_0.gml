@@ -46,8 +46,21 @@ if (place_meeting(x,y,obj_player) && obj_player.state_name == "Dash") {
 	//state_switch("Stun");
 }
 
-state_execute();
+steering = vector_add(steering, sb_avoid_collision(obj_solid_nonentity,32,MAX_AVOID_FORCE,3));
+steering = vector_add(steering, sb_avoid_collision(obj_obstacle,32,MAX_AVOID_FORCE,3));
+
+steering = vector_add(steering, sb_separation(object_index,10,5));
+steering = vector_add(steering, sb_alignment(object_index,10,2));
+steering = vector_add(steering, sb_cohesion(object_index,10,1));
+
+steering = vector_add(steering, sb_queue(object_index, 8, 16));
+
+steering = vector_truncate(steering, MAX_FORCE);
+steering = vector_divr(steering, MASS);
+velocity = vector_truncate(vector_add(velocity, steering), SPEED);
 
 if (_health <= 0) {
 	state_switch("Die");
 }
+
+state_execute();

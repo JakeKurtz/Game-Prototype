@@ -1,6 +1,6 @@
-/// @description state_init(state);
-/// @param state
-//Sets the default state for the object.  Called only in the create event.
+///@function state_init Sets the default state for the object. Called only in the create event.
+///@arg state
+
 if(is_real(argument[0]))
 {
     state=argument[0];

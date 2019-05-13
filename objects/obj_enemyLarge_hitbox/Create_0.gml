@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited();
+
 image_scale = obj_enemy_large.image_scale;
 
 image_xscale = image_xscale*image_scale;

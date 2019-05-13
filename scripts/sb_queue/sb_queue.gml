@@ -1,7 +1,8 @@
 // @description: 
-// @param: object
-// @param: max radius queue
-// @param: max queue ahead
+///@function sb_queue
+///@arg object
+///@arg max_radius_queue
+///@arg max_queue_ahead
 
 var _object = argument[0];
 var _max_radius_queue = argument[1];

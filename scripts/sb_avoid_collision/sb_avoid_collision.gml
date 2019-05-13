@@ -1,5 +1,10 @@
-///sb_avoid_collision(object, see_ahead_distance, max_avoidance_force, weight)
-///Return vector2 for avoiding colliding with specified object
+///@function sb_avoid_collision(object, see_ahead_distance, max_avoidance_force, weight)
+///@arg object
+///@arg see_ahead_distance
+///@arg max_avoidance_force
+///@arg weight
+///@ret vector2 for avoiding colliding with specified object
+
 ///Requires collision_line_first from GMLscripts.com
 ///Objects used for avoidance must have position (vect2) variables set.
 ///If they move, they must also update their position variables in their step event.

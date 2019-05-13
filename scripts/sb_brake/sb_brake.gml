@@ -1,3 +1,7 @@
+///@function sb_brake
+///@arg decel_rate
+///@arg decel_thing
+
 var _decel_rate = argument[0];
 var _decel_thing = argument[0];
 

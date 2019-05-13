@@ -1,3 +1,6 @@
+///@function part_blood_large
+///@arg object_attacking
+
 var _object_attacking = argument[0];
 
 var _point_to_player = vector((_object_attacking.x - x),(_object_attacking.y - y));

@@ -1,5 +1,6 @@
-///vect_dist(vect1,vect2)
-//returns the distance between vect1 and vect2
+///@function vect_dist Gets the distance between vect1 and vect2
+///@arg v1
+///@arg v2
 
 var v1 = argument0;
 var v2 = argument1;

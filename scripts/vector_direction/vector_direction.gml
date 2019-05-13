@@ -1,5 +1,6 @@
-///vect_direction(vector)
-//returns direction of given vector
+///@function vectore_direction Returns direction of given vector
+///@arg v
+
 var _vec=argument[0];
 if(_vec[1]==0 && _vec[2]==0)
     return(-1);

@@ -1,7 +1,10 @@
 // @description: Object follows the closest leader.
-// @param: leader object.
-// @param: The distance to stop at behind leader.
-// @param: Weight of force
+///@function sb_follow_leader
+///@arg leader
+///@arg leader_behind_dist
+///@arg sight_radius
+///@arg weight
+
 
 var _leader = argument[0];
 var _leader_behind_dist = argument[1];

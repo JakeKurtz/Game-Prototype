@@ -1,3 +1,6 @@
+///@function clique_activate_vertex
+///@arg color
+
 var color = argument[0];
 var self_id = id;
 var color_value = 1;

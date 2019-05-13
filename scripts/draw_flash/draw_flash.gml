@@ -1,3 +1,6 @@
+///@function draw_flash
+///@arg flash
+
 argument[0] = flash;
 
 // Flash red when hit

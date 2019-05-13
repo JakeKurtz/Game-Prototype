@@ -38,6 +38,8 @@ depth = -y;
 if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))
 if (y_speed != 0) y_speed -= (walk_decel * sign(y_speed))
 
+//mask_index=spr_player_footbox;
+
 #region // Horizontal collision
 if (place_meeting(x+x_speed,y,obj_solid_nonentity)) {
     while(!place_meeting(x+sign(x_speed),y,obj_solid_nonentity)) x += sign(x_speed);
@@ -50,6 +52,8 @@ if (place_meeting(x,y+y_speed,obj_solid_nonentity)) {
 	if (state_name == "Dash") global.camera_shake = true;
     y_speed = 0;
 } #endregion
+
+//mask_index=sprite_index;
 
 x += x_speed;
 y += y_speed;

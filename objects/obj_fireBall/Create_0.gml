@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+event_inherited();
+
 image_speed = 2;
 
-position = vector(x,y);
-velocity = vector(0,0);
-
-MAX_SPEED = 20;
+SPEED = 20;
 MAX_FORCE = 1;
 MASS = 1;
 

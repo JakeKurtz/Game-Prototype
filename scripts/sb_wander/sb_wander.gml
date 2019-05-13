@@ -1,5 +1,9 @@
-///sb_wander(circle_distance, circle_radius, wander_angle, weight)
-///Return vector2 for steering towards random point
+///@function sb_wander
+///@arg circle_distance
+///@arg circle_radius
+///@arg wander_angle
+///@arg weight
+///@ret vector2 for steering towards random point
 
 var circle_distance = argument[0];
 var circle_radius = argument[1];
@@ -22,6 +26,6 @@ var target_position = vector_add(position, vector_add(circle_center, displacemen
 
 
 // Set velocity
-var desired_velocity = vector_scaler(vector_sub(target_position, position), MAX_SPEED);
+var desired_velocity = vector_scaler(vector_sub(target_position, position), SPEED);
 
 return (vector_mulr(vector_sub(desired_velocity, velocity), weight));

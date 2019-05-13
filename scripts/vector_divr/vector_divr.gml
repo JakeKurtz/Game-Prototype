@@ -1,5 +1,7 @@
-///vect_divr(vect, real)
-//divides each component of vect by the value specified
+///@function vect_divr Divides each component of vect by the value specified
+///@arg v
+///@arg n
+
 var v1 = argument0;
 var r = argument1;
 var v;

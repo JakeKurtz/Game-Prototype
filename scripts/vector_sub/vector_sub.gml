@@ -1,9 +1,6 @@
-/*
--- Subtracts each component of vect1 with each component of vect2
--- @ param v1
--- @ param v2
--- @ return v 
-*/
+///@function vector_sub Subtracts each component of vect1 with each component of vect2
+///@arg v1
+///@arg v2
 
 var v1 = argument0;
 var v2 = argument1;

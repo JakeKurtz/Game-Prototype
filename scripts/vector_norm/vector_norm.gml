@@ -1,8 +1,5 @@
-/*
--- Normalises a scalar to vector 
--- @ param v1
--- @ return v 
-*/
+///@function vector_norm Normalises a scalar to vector 
+///@arg v
 
 var v1 = argument0;
 var v;

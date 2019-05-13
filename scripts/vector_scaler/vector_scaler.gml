@@ -1,8 +1,6 @@
-/*
--- Scales the vector to the distance specified
--- @ param v1
--- @ return v 
-*/
+///@function vector_scaler Scales the vector to the distance specified
+///@arg vector
+///@arg scale
 
 var v1 = vector_norm(argument0);
 var scale = argument1;

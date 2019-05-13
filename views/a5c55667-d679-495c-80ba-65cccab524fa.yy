@@ -16,7 +16,7 @@
         "6771a43d-eb24-4d92-84c5-90ef1b2a7273"
     ],
     "filterType": "GMScript",
-    "folderName": "RANGED",
+    "folderName": "DEFAULT",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

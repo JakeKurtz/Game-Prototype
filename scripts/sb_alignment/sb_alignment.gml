@@ -1,5 +1,8 @@
-///sb_alignment(object, radius, weight)
-///Return vector2 for aligning velocity with given object in given radius
+///@function sb_alignment(object, radius, weight)
+///@arg object
+///@arg radius 
+///@arg weight
+///@ret vector2 for aligning velocity with given object in given radius
 ///Uses collision_circle_list from GMLscripts.com
 
 var _align_obj = argument[0];

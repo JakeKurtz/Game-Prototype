@@ -1,5 +1,5 @@
 if(state_new) {
-    MAX_SPEED = 1.5;
+    SPEED = 1.5;
 	image_index = 0;
 }
 
@@ -38,4 +38,4 @@ steering = vector_add(steering, sb_avoid_collision(obj_obstacle,64,MAX_AVOID_FOR
 steering = vector_add(steering, sb_queue(object_index, 32, 16));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
-velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);
+velocity = vector_truncate(vector_add(velocity, steering), SPEED);

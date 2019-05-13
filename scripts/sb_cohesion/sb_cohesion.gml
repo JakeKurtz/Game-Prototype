@@ -1,5 +1,8 @@
-///sb_cohesion(object, radius, weight)
-///Return vector2 for aligning location with given object in given radius
+///@function sb_cohesion(object, radius, weight)
+///@arg object
+///@arg radius
+///@arg weight
+///@ret vector2 for aligning location with given object in given radius
 ///Uses collision_circle_list from GMLscripts.com
 
 var _sep_obj = argument[0];

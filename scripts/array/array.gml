@@ -1,6 +1,6 @@
-/// @description array(*args);
-/// @param *args
-// Just a script that makes declaring arrays nicer
+///@description array Just a script that makes declaring arrays nicer
+///@arg *args
+
 var arr;
 for (var i=0;i<argument_count;i+=1)
 {

@@ -1,7 +1,7 @@
 steering = vector_add(velocity, sb_seek(obj_player.x, obj_player.y, 1));
 steering = vector_truncate(steering, MAX_FORCE);
 steering = vector_divr(steering, MASS);
-velocity = vector_truncate(vector_add(velocity, steering), MAX_SPEED);
+velocity = vector_truncate(vector_add(velocity, steering), SPEED);
 
 direction = vector_direction(velocity);
 

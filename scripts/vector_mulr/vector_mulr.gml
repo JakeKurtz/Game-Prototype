@@ -1,5 +1,6 @@
-///vect_multr(vect, real)
-//multiplies each component of vect by the value specified
+///@function vect_multr Multiplies each component of vect by the value specified
+///@arg v
+///@arg n
 
 var v1 = argument0;
 var r = argument1;

@@ -1,8 +1,6 @@
-/*
--- Returns the length of a scalar 
--- @ param v1
--- @ return tot
-*/
+///@function vector_len Returns the length of a scalar 
+///@arg v
+///@ret tot
 
 var v1 = argument0;
 

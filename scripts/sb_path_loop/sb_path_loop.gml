@@ -1,5 +1,9 @@
-///sb_path_loop(path, max_distance, dir, weight)
-///Return vector2 for following a path (looped)
+///@function sb_path_loop
+///@arg path
+///@arg max_distance
+///@arg direction
+///@arg weight
+///@ret vector2 for following a path (looped)
 
 var _path = argument[0];
 var _max_distance = argument[1];
@@ -18,7 +22,7 @@ if(_distance_to_point < _max_distance) { //point reached
     if(my_path_position < 0) { my_path_position = path_get_number(_path)-1; }
 } 
 
-// subtract current position from target position and constrain to max_speed
-var _desired_velocity = vector_scaler(vector_sub(_target,position),MAX_SPEED);
+// subtract current position from target position and constrain to SPEED
+var _desired_velocity = vector_scaler(vector_sub(_target,position),SPEED);
 
 return (vector_mulr(vector_sub(_desired_velocity,velocity),_weight));

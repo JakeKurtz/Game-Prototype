@@ -1,6 +1,7 @@
-/// @description state_switch(state <script or name>,<push to stack?>)
-/// @param state <script or name>
-/// @param <push to stack?>
+///@function state_switch
+///@arg state <script or name>
+///@arg <push to stack?>
+
 var _push = true;
 if(argument_count>1)
   _push=argument[1];
