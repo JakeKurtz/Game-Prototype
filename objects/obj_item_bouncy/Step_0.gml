@@ -3,8 +3,7 @@
 depth = -y;
 
 // Decelerating movement
-if (velocity[1] != 0) velocity[1] -= (decel * sign(velocity[1]))
-if (velocity[2] != 0) velocity[2] -= (decel * sign(velocity[2]))
+velocity = vector_add(velocity, vector(-velocity[1]*decel, -velocity[2]*decel));
 
 velocity[1] = clamp(velocity[1], -3, 3);
 velocity[2] = clamp(velocity[2], -3, 3);
@@ -12,14 +11,13 @@ velocity[2] = clamp(velocity[2], -3, 3);
 // gravity
 z_velocity += grav;
 
+z += z_velocity;
+
 // z collision
 if(z>0) {
 	z = 0; 
-	z_velocity *= -.7;
-	if (abs(z_velocity)) <= 2 then z_velocity = 0;
+	z_velocity *= -.8;
 }
-
-z += z_velocity;
 
 #region // horizontal collision
 if (place_meeting(x + velocity[1], y, obj_solid_nonentity)) {

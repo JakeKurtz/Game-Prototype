@@ -1,13 +1,17 @@
 /// @description Properties
 event_inherited();
 
-obj_e_hitbox = obj_enemySmall_hitbox;
+hurtbox = hurtbox_create(14,18,-7,-9);
+damage = 20;
+
+//hitbox = obj_enemySmall_hitbox;
 take_damage = true;
 aggressive = false;
 take_damage = true;
 draw_blood = false;
 can_attack = true;
-_health = irandom_range(25,100);
+_health = irandom_range(50,100);
+strength = _health;
 
 m_attack_range = 0;
 my_path_position = 0;
@@ -31,6 +35,8 @@ MAX_AVOID_FORCE = 0.25;
 
 #region // Animation arrays
 
+die_animation = spr_zombie_die;
+
 idle_animations = array(spr_zombie_idle2,
 						spr_zombie_f_idle);
 
@@ -39,8 +45,8 @@ walk_animations = array(spr_zombie_walk);
 attack_animations = array(spr_zombie_attack1,
 	                      spr_zombie_attack2);
 						  
-ds_map_add(hitbox_range, spr_zombie_attack1, vector(3,4));
-ds_map_add(hitbox_range, spr_zombie_attack2, vector(3,4));
+ds_map_add(hitbox_range, spr_zombie_attack1, 4);
+ds_map_add(hitbox_range, spr_zombie_attack2, 4);
 
 #endregion
 

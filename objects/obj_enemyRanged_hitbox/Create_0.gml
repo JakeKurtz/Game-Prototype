@@ -3,6 +3,8 @@
 
 event_inherited();
 
+damage = 25;
+
 image_scale = obj_enemy_ranged.image_scale;
 
 image_xscale = image_xscale*image_scale;

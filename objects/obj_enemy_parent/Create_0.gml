@@ -1,11 +1,24 @@
 /// @description Enemy properties skeleton
 
+//hurtbox
+//hurtbox = hurtbox_create(18,24,-9,-12);
+
+//hitbox
+hitbox = -1;
+
+hit = false;
+hitStun = 0;
+hitBy = -1;
+
+explode = false;
+
 path = path_add();
 path_patrol = path0;
 
 image_scale = global.image_scale;
 default_image_speed = 0.5;
-obj_e_hitbox = noone;
+_health = 0;
+strength = _health;
 
 speed_flee = 1;
 speed_follow = 1;

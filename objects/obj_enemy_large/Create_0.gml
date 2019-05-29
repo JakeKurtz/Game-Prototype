@@ -6,6 +6,7 @@ take_damage = true;
 aggressive = false;
 flash = 0;
 _health = 150;
+strength = _health;
 can_attack = true;
 
 m_attack_range = 5;
@@ -36,9 +37,9 @@ attack_animations = array(spr_minotaur_attack1,
 	                      spr_minotaur_attack2,
 	                      spr_minotaur_attack3);
 						  
-ds_map_add(hitbox_range, spr_minotaur_attack1, vector(1,2));
-ds_map_add(hitbox_range, spr_minotaur_attack2, vector(1,2));
-ds_map_add(hitbox_range, spr_minotaur_attack3, vector(3,6));
+ds_map_add(hitbox_range, spr_minotaur_attack1, 2);
+ds_map_add(hitbox_range, spr_minotaur_attack2, 2);
+ds_map_add(hitbox_range, spr_minotaur_attack3, 6);
 						  
 #endregion
 

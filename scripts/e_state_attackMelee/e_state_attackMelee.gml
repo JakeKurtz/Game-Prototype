@@ -7,9 +7,6 @@ if(state_new) {
 velocity[1] = 0;
 velocity[2] = 0;
 
-var min_frame; 
-var max_frame;
-
 // Makes sure the enemy is facing the player.
 var vector_dir = point_direction(x,y,obj_player.x,obj_player.y)
 	
@@ -18,19 +15,11 @@ else if (vector_dir >= 110 && vector_dir <= 250) image_xscale = -image_scale;
 
 // The frames when the hitbox should be spawned in.
 for (var i = 0; i < array_length_1d(attack_animations); i++) {
-    if sprite_index == attack_animations[i] {
-		var vals = ds_map_find_value(hitbox_range, sprite_index);
-		min_frame = vals[0];
-		max_frame = vals[1];
-	}
+    if sprite_index == attack_animations[i] var frame = ds_map_find_value(hitbox_range, sprite_index);
 }
 
-// Spawn hit box
-if (image_index >= min_frame && image_index <= max_frame) {
-	with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_e_hitbox)) {
-		image_xscale = other.image_xscale;
-	}
-}
+// spawning hitbox
+if (hitbox == -1 && floor(image_index) == frame) hitbox = hitbox_create(12*sign(image_xscale), 12, 0, -8, 15, 3, 45);
 
 // Paces out attacks
 if (image_index+image_speed >= image_number) {

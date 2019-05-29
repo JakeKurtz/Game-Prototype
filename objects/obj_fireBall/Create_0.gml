@@ -3,6 +3,8 @@
 
 event_inherited();
 
+damage = 50;
+
 image_speed = 2;
 
 SPEED = 20;

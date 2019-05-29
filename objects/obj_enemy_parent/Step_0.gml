@@ -31,13 +31,21 @@ if (place_meeting(x,y+velocity[2],obj_solid_nonentity)) {
 } #endregion
 y += velocity[2];
 
+// pushes object out of walls
+var check = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_solid_nonentity, false, true);
+if (check != noone) {
+	move_outside_solid(point_direction(check.x, check.y, x, y), 3);
+}
+
+
 // If the player hits you, flash and switch state to stunned.
-if (place_meeting(x,y,obj_player_hitbox) && take_damage) {
-	part_blood_large(obj_player);	
-	flash = 1;	
-	take_damage = false;
-	alarm[0] = 30;
-	_health -= 25;
+if (hit) {
+	part_blood_large(hitBy.owner);	
+	flash = 1;
+	hit = false;
+	show_debug_message(hitBy.owner.damage/strength);
+	if (hitBy.owner.damage/strength >= 1) then explode = true;
+	_health -= hitBy.owner.damage;
 	if (state_name != "Attack") state_switch("Stun");
 }
 

@@ -1,5 +1,4 @@
 /// @description  Animation and movment logic
-
 position = vector(x,y);
 velocity = vector(x_speed,y_speed);
 
@@ -32,13 +31,15 @@ if WASD_enabled {
 if (key_left) image_xscale = -image_scale;
 else if (key_right) image_xscale = image_scale;
 
+if mouse_check_button(mb_left) foo++;
+else foo--;
+foo = clamp(foo, 0, 90);
+
 depth = -y;
 
 // Decelerating movement
 if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))
 if (y_speed != 0) y_speed -= (walk_decel * sign(y_speed))
-
-//mask_index=spr_player_footbox;
 
 #region // Horizontal collision
 if (place_meeting(x+x_speed,y,obj_solid_nonentity)) {
@@ -53,7 +54,11 @@ if (place_meeting(x,y+y_speed,obj_solid_nonentity)) {
     y_speed = 0;
 } #endregion
 
-//mask_index=sprite_index;
+// pushes object out of walls
+var check = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_solid_nonentity, false, true);
+if (check != noone) {
+	move_outside_solid(point_direction(check.x, check.y, x, y), 3);
+}
 
 x += x_speed;
 y += y_speed;
@@ -61,19 +66,17 @@ y += y_speed;
 // TODO : Make it work with vertical speed 
 // Dust particle when player comes to a stop
 if state_name == "Attack" && (abs(x_speed) >= 4 && abs(x_speed) <= 5) {
-	part_emitter_region(obj_ps.part_system, obj_ps.part_emitter, x-10, x+10, y+15, y+19, ps_shape_rectangle, ps_distr_linear);
+	part_emitter_region(obj_ps.part_system, obj_ps.part_emitter, x-5, x+5, y+7, y+9, ps_shape_rectangle, ps_distr_linear);
 	part_emitter_burst(obj_ps.part_system, obj_ps.part_emitter, obj_ps.part_player_dust, 6);
 	draw_self();
 }
 
-// If the player hits you, flash and switch state to stunned.
-if (place_meeting(x,y,obj_enemy_hitbox) && take_damage) {
-	
-	part_blood_large(obj_enemy_parent);
-	
-	flash = 1;	
-	take_damage = false;
-	alarm[1] = 15;
+// If you get hit, flash and switch state to stunned.
+if (hit) {
+	part_blood_large(hitBy.owner);
+	flash = 1;
+	hit = false;
+	_health -= hitBy.owner.damage;
 	state_switch("Stun");
 }
 

@@ -1,7 +1,22 @@
 /// @description Properties
-
 // TODO : Organize
+
+foo = 0;
+sword = true;
+bomb = false;
+
+//hurtbox
+hurtbox = hurtbox_create(18,22,-9,-12);
+
+//hitbox
+hitbox = -1;
+
+hit = false;
+hitStun = 0;
+hitBy = -1;
+
 _health = 500;
+damage = 25;
 take_damage = true;
 flash = 0;
 image_scale = global.image_scale;
@@ -13,6 +28,9 @@ image_yscale = image_yscale*image_scale;
 
 position = vector(0,0);
 velocity = vector(0,0);
+
+globalvar inventory;
+inventory = ds_list_create();
 
 atk_type = "";
 combo_stream = "";

@@ -5,19 +5,25 @@ image_index=irandom(image_number-1)
 image_speed = 0;
 image_blend = global.c_blood_red;
 
-if (1 == irandom_range(0,1)) x_velocity = -1;	
+/*if (1 == irandom_range(0,1)) x_velocity = -1;	
 else x_velocity = 1;
 
 if (1 == irandom_range(0,1)) y_velocity = -1;	
 else y_velocity = 1;
 
-velocity = vector(x_velocity*irandom_range(1,2),y_velocity*irandom_range(1,2));
+velocity = vector(x_velocity*random_range(0,1.4),y_velocity*random_range(0,1.4));*/
 decel = 0.02;
-alpha = 0.85;
-size = 2;
 
 z = 0;
-z_velocity = irandom_range(-10,-5);
-grav = 0.5;
+z_velocity = random_range(-3,-1);
+grav = 0.25;
 
 can_draw = true;
+
+zvel_1 = 1;
+zvel_2 = 1;
+zvel_3 = 1;
+
+vel_1 = 1;
+vel_2 = 1;
+vel_3 = 1;

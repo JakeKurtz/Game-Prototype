@@ -1,5 +1,4 @@
 /// @description 
-
 var CELL_SIZE = 16;
 
 var hcells = room_width div CELL_SIZE;

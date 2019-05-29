@@ -3,11 +3,12 @@
 
 event_inherited();
 
-obj_e_hitbox = obj_enemyRanged_hitbox;
+//hitbox = obj_enemyRanged_hitbox;
 aggressive = false;
 take_damage = true;
 flash = 0;
 _health = 50;
+strength = _health;
 can_attack = true;
 
 r_attack_range = 100;
@@ -31,13 +32,16 @@ MAX_AVOID_FORCE = 0.5;
 #endregion
 
 #region // Animation arrays and hitbox ranges
+
+die_animation = spr_imp_die;
+
 idle_animations = array(spr_imp_idle1);
 
 walk_animations = array(spr_imp_walk);
                  
 attack_animations = array(spr_imp_attack_r);
 
-ds_map_add(hitbox_range, spr_imp_attack_r, vector(3,4));
+ds_map_add(hitbox_range, spr_imp_attack_r, 4);
 
 #endregion
 

@@ -4,12 +4,10 @@ position = vector(x,y);
 
 
 // Only draws blood if gib is moving
-if (can_draw && z > 0) { 
+if (can_draw && z_velocity <= 0) { 
 	surface_set_target(obj_surface.surface_gore);
 	
-	//gpu_set_fog(true, global.c_blood_red, 0, 0);
-	//draw_sprite_ext(spr_bloodExplosion2,irandom_range(4,9),x+irandom_range(-10,10),y+irandom_range(-10,10),size,size,0,c_white,alpha);
-	//gpu_set_fog(false, c_black, 0, 0);
+	draw_sprite_ext(spr_bloodSplat,irandom(image_number-1),x,y,0.5,0.5,irandom(360),c_white,1);
 
 	surface_reset_target();
 
