@@ -2,6 +2,7 @@
 
 position = vector(x,y);
 
+draw_shadow(image_xscale*4,image_yscale*2,0,1,0.75);
 
 // Only draws blood if gib is moving
 if (can_draw && z_velocity <= 0) { 
