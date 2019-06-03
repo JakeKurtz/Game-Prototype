@@ -5,8 +5,8 @@ if( !surface_exists(surf) ){
     surf = surface_create(room_width,room_height);
 }
 
-var lx = mouse_x;       // the light position, based around the mouse location
-var ly = mouse_y;
+var lx = x;       // the light position, based around the mouse location
+var ly = y;
 var rad = 256;          // the radius of the light
 var tile_size = 32;     // size of a tile
 var tilemap = layer_tilemap_get_id("walls");
@@ -18,11 +18,6 @@ var endy = floor((ly+rad)/tile_size);
 
 draw_set_color(c_yellow);
 draw_rectangle(startx*tile_size,starty*tile_size, endx*tile_size,endy*tile_size,true);  
-
-shader_set(shd_shadow);
-shader_set_uniform_f(LightPosRadius, lx, ly, rad, 0.0);
-draw_surface(surf, 0, 0);
-shader_reset();
 
 surface_set_target(surf);
 draw_clear_alpha(0,0);
@@ -56,8 +51,12 @@ for(var yy=starty;yy<=endy;yy++)
         }
     }
 }
+
 vertex_end(VBuffer);    
 vertex_submit(VBuffer,pr_trianglelist,-1);
 surface_reset_target();
 
-draw_surface(surf,0,0);
+shader_set(shd_shadow);
+shader_set_uniform_f(LightPosRadius, lx, ly, rad, 0.0);
+draw_surface_ext(surf,0,0,1,1,0,image_blend,0.5);
+shader_reset();
