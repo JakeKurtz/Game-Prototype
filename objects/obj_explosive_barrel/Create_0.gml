@@ -4,8 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-image_blend = c_yellow;
-
 flag = true;
 //hitbox = obj_exBarrel_hitbox;
 

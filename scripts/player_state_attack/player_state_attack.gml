@@ -38,7 +38,7 @@ else if (bomb) {
 	// **************************** BOMB SHIT ***********************************
 	sprite_index = spr_player_idle;
 	if mouse_check_button_released(mb_left) {
-		throw_bomb(x,y,mouse_x,mouse_y,foo);
+		throw_bomb(x,y,mouse_x,mouse_y,60);
 		state_switch("Idle");
 	}
 	// **************************************************************************

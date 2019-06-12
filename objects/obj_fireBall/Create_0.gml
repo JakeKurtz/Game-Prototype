@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-event_inherited();
+//hitbox
+hitbox = -1;
 
+position = vector(x,y);
+velocity = vector(0,0);
 damage = 50;
 
 image_speed = 2;

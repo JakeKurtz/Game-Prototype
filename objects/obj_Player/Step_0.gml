@@ -14,6 +14,8 @@ key_atk_hard = mouse_check_button_pressed(mb_right);
 
 key_attack = (key_atk_light || key_atk_hard);
 
+//if key_attack then instance_create_layer(mouse_x,mouse_y, "Compatibility_Instances_Depth_0", obj_light);
+
 #endregion
 
 #region // Getting direction of player

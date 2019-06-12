@@ -4,7 +4,7 @@
 ///@arg xOffset
 ///@arg yOffset
 
-_hurtbox = instance_create_layer(x, y, "Instances_2", obj_hurtbox);
+_hurtbox = instance_create_layer(x, y, "Compatibility_Instances_Depth_0", obj_hurtbox);
 _hurtbox.owner = id;
 _hurtbox.image_xscale = argument0;
 _hurtbox.image_yscale = argument1;

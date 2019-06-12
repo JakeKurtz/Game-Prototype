@@ -1,11 +1,13 @@
 /// @description For debugging
 // You can write your code in this editor
-
+with (obj_enemy_ranged) {
 draw_text(20,20,string_hash_to_newline("State: "+string(state_name)
 			  +"#Health: "+string(_health)
               +"#x_speed: "+string(velocity[1])
-			  +"#y_speed: "+string(velocity[2]))
+			  +"#y_speed: "+string(velocity[2])
+			  +"#FPS: "+string((fps_real)))
          );
+}
 		 
 		 /// @description For debugging
 // You can write your code in this editor

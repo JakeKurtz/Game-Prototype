@@ -1,11 +1,5 @@
-/// @description init shadow casting
-vertex_format_begin();
-vertex_format_add_position();
-vertex_format_add_color();
-VertexFormat = vertex_format_end();
+light_init_point(256,c_white);
+//light_init_sprite(spr_light,0);
+light_set_color(make_color_rgb(255,255,255));
+r = 0;
 
-VBuffer = vertex_create_buffer();
-
-surf = -1;
-
-LightPosRadius = shader_get_uniform(shd_shadow,"u_fLightPositionRadius");

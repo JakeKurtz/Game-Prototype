@@ -2,6 +2,9 @@
 
 event_inherited();
 
+hurtbox = hurtbox_create(14,18,-7,-9);
+damage = 50;
+
 take_damage = true;
 aggressive = false;
 flash = 0;

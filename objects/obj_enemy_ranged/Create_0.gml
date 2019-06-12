@@ -3,7 +3,9 @@
 
 event_inherited();
 
-//hitbox = obj_enemyRanged_hitbox;
+hurtbox = hurtbox_create(14,18,-7,-9);
+damage = 30;
+
 aggressive = false;
 take_damage = true;
 flash = 0;
@@ -17,10 +19,10 @@ flee_range = 50;
 
 my_path_position = 0;
 
-speed_flee = 2.5;
+speed_flee = 1;
 speed_follow = 1;
 speed_patrol = 1;
-speed_pursue = 2.5;
+speed_pursue = 1;
 speed_wander = 1;
 
 #region // Steering constants

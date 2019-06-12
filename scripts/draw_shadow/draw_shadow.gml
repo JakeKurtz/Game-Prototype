@@ -19,13 +19,15 @@ if(argument_count>0){
 	alpha = 0.75;
 }
 
-surface_set_target(obj_surface.surface_shadow);
-gpu_set_fog(true, c_black, 0, 0);
-draw_clear_alpha(c_black,0); // clear surface
-draw_ellipse(x-xscale+xoff, y-yscale+yoff, x+xscale+xoff, y+yscale+yoff, false);
-draw_set_alpha(alpha);
-gpu_set_fog(false, c_black, 0, 0);
-surface_reset_target();
-draw_surface(obj_surface.surface_shadow,0,0);
+if(surface_exists(obj_surface.surface_floor)){
+	surface_set_target(obj_surface.surface_shadow);
+	gpu_set_fog(true, c_black, 0, 0);
+	draw_clear_alpha(c_black,0); // clear surface
+	draw_ellipse(x-xscale+xoff, y-yscale+yoff, x+xscale+xoff, y+yscale+yoff, false);
+	draw_set_alpha(alpha);
+	gpu_set_fog(false, c_black, 0, 0);
+	surface_reset_target();
+	draw_surface(obj_surface.surface_shadow,0,0);
+}
 
 

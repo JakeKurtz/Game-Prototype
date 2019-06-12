@@ -28,7 +28,7 @@ if (_health <= 0) {
 	
 	if (image_index+image_speed >= image_number) {
 		surface_set_target(obj_surface.surface_gore);
-		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_red,1);
+		draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,0,c_white,1);
 		surface_reset_target();
 		instance_destroy();
 	}

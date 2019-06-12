@@ -1,5 +1,7 @@
 /// @description Properties
 // TODO : Organize
+caster_init_polygon();
+caster_init_rectangle(0,0,0,0);
 
 foo = 0;
 sword = true;

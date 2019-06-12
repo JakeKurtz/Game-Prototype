@@ -4,7 +4,6 @@ event_inherited();
 hurtbox = hurtbox_create(14,18,-7,-9);
 damage = 20;
 
-//hitbox = obj_enemySmall_hitbox;
 take_damage = true;
 aggressive = false;
 take_damage = true;

@@ -18,19 +18,22 @@ if (aggressive == true) {
 	
 	// Attack again after some time
 	if (can_attack) {
-		// If the player gets to far away, then pursue him.
-		if (r_attack_range != -1 && _distance_to_player <= r_attack_range && _distance_to_player > flee_range) {
-			state_switch("Ranged Attack");
-		} else if (m_attack_range != -1 && _distance_to_player <= m_attack_range) { 
-			state_switch("Melee Attack");
+		
+		if (m_attack_range != -1 && _distance_to_player <= m_attack_range) 
+				state_switch("Melee Attack");
+			
+		else if (r_attack_range != -1 && _distance_to_player <= r_attack_range && _distance_to_player > flee_range) 
+				state_switch("Ranged Attack");
+		
+	} else {
+		if (r_attack_range != -1) {
+			if (_distance_to_player > r_attack_range) state_switch("Pursue");
+		} if (m_attack_range != -1) {
+			if (_distance_to_player > m_attack_range && _distance_to_player > r_attack_range) state_switch("Pursue");
+		} if (flee_range != -1) {
+			if (_distance_to_player <= flee_range && _distance_to_player > m_attack_range) state_switch("Flee");
 		}	
 	}
-	
-	else if (r_attack_range != -1 && _distance_to_player > r_attack_range) state_switch("Pursue");
-	else if (m_attack_range != -1 && _distance_to_player > m_attack_range) state_switch("Pursue");
-	
-	if (flee_range != -1 && _distance_to_player <= flee_range && _distance_to_player > m_attack_range) state_switch("Flee");
-	
 }
 // If the previous state was patrol
 else {
