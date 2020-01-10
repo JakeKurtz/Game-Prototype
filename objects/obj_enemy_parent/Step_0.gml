@@ -38,8 +38,8 @@ if (check != noone) {
 }
 
 
-// If the player hits you, flash and switch state to stunned.
-if (hit) {
+// If something hits you, flash and switch state to stunned.
+if (hit) {	
 	part_blood_large(hitBy.owner);	
 	flash = 1;
 	hit = false;

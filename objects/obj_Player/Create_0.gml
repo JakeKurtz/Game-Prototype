@@ -3,6 +3,9 @@
 caster_init_polygon();
 caster_init_rectangle(0,0,0,0);
 
+z = -1;
+image_alpha=sprite_height/255; //piggyback alpha channel to encode sprite height
+
 foo = 0;
 sword = true;
 bomb = false;
@@ -85,7 +88,7 @@ for (var i = 0; i < nmb_atk_points; ++i) {
 	ds_map_replace(atk_point_map,string(i*atk_point_interval),false);
 }
 
-instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_player_footbox);
+instance_create_layer(x,y,"Instances",obj_player_footbox);
 state_machine_init();
 
 //Define States

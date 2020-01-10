@@ -20,7 +20,7 @@ if(hitbox != -1){
                 //checking collision from the hitbox object
                 with(other){
                     //check to see if your target is on the ignore list
-                    //if it is on the ignore list, dont hit it again
+                    //if it's on the ignore list, dont hit it again
                     for(i = 0; i < ds_list_size(ignore_list); i ++){
                         if(ignore_list[|i] = other.owner){
                             ignore = true;
@@ -28,12 +28,11 @@ if(hitbox != -1){
                         }
                     }
 
-                    //if it is NOT on the ignore list, hit it, and add it to
-                    //the ignore list
+                    //if it's NOT on the ignore list, hit it, and add it to the ignore list
                     if(!ignore){
                         other.owner.hit = true;
                         other.owner.hitBy = id;
-                        ds_list_add(ignore_list,other.owner);
+                        ds_list_add(ignore_list, other.owner);
                     }
                 }
             }

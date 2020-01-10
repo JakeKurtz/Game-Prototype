@@ -15,7 +15,17 @@
         "1ca200ec-9a37-4afb-a4fe-88f5ebb08821",
         "36971e76-dbd4-463f-b0f9-6ab7b081e1f0",
         "fbaafaf8-ba97-467a-9858-3b2f7047d705",
-        "a3171107-7da2-48e7-b4a7-6af1b440cf35"
+        "a3171107-7da2-48e7-b4a7-6af1b440cf35",
+        "42dcdbf5-a32a-4851-8704-3833d455816e",
+        "1b599afe-844f-4807-b144-1a2e2a7a9e52",
+        "29ab554e-1819-476a-9482-56490e216ae4",
+        "a377f192-fdc8-46ef-9ed5-1a9bf6403e64",
+        "8b342059-f5f1-41b1-b9e5-9ec3b7bba760",
+        "23faad3f-89db-418e-b636-5d81a0b941be",
+        "f88deb89-2950-4fa7-bba8-49bc1a078026",
+        "6d8b72d3-49b6-4bd3-933b-fc62e9167aa6",
+        "171b81a3-181e-4486-84a6-8a4cdbec7836",
+        "772c48d1-9b5e-44da-beb4-06ea3faef044"
     ],
     "filterType": "GMScript",
     "folderName": "VECTORS",

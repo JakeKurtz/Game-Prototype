@@ -7,7 +7,7 @@
 ///@arg xHit
 ///@arg hitStun
 
-_hitbox = instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_hitbox);
+_hitbox = instance_create_layer(x,y,"Instances",obj_hitbox);
 _hitbox.owner = id;
 _hitbox.image_xscale = argument0;
 _hitbox.image_yscale = argument1;

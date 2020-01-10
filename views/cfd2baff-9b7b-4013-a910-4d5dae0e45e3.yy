@@ -8,8 +8,10 @@
         "adcc03d2-aaa5-4909-9317-1e288903de50",
         "0acc5e19-25f6-4fc1-a0e5-f34ab9b7a21d",
         "01631874-d098-4035-9eb6-2fd88c803ae8",
-        "b5c0e67c-071e-45b3-b920-a84d9f8c352a",
-        "77c5d307-85fb-4388-b8bd-22d666bd8892"
+        "77c5d307-85fb-4388-b8bd-22d666bd8892",
+        "90015f55-6ce3-4cee-b156-09948bc0b2f5",
+        "d25fb2a3-5387-4cf5-b09d-dd17da9663c4",
+        "b8f7df15-9425-4642-a0b6-a2e24589bb67"
     ],
     "filterType": "GMObject",
     "folderName": "HELPERS",
