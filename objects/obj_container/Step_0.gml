@@ -1,8 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-depth = -y;
-
+modelMatrix = matrix_build(x -  sprite_width / 2, 
+						   y - sprite_height / 2, 
+						   -(sqrt(2) * sprite_height) / 2, 
+						   -45, 
+						   0, 
+						   0, 
+						   sprite_width, 
+						   sprite_height, 
+						   sprite_height);
+						   
 if (_health <= 0) {
 	sprite_index = _spr_break;
 	image_speed = 1;
@@ -10,13 +18,13 @@ if (_health <= 0) {
 	// spawn some health maybe
 	if (irandom_range(1,30) == 1) {
 		for (var i = 0; i < irandom_range(1,6); ++i) {
-		    instance_create_layer(x,y, "Compatibility_Instances_Depth_0", obj_hp_5);
+		    instance_create_layer(x,y, "Instances", obj_hp_5);
 		}
 	}
 	
 	if (irandom_range(1,50) == 1) {
 		for (var i = 0; i < irandom_range(1,3); ++i) {
-			instance_create_layer(x,y, "Compatibility_Instances_Depth_0", obj_hp_15);
+			instance_create_layer(x,y, "Instances", obj_hp_15);
 		}
 	}*/
 	

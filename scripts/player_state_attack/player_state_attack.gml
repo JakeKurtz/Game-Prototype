@@ -10,12 +10,12 @@ if (sword) {
 		if (combo == 0) {
 			image_index = 0; 
 			sprite_index = animations_attack[1];
-			x_speed += (5 * image_xscale/image_scale) * walk_accel;
+			x_speed -= (5 * image_xscale/image_scale) * walk_accel;
 		} 
 		else if (combo == 1) {
 			image_index = 0; 
 			sprite_index = animations_attack[2]; 
-			x_speed += (5 * image_xscale/image_scale) * walk_accel;
+			x_speed -= (5 * image_xscale/image_scale) * walk_accel;
 		}
 	
 		alarm[0] = room_speed/2;

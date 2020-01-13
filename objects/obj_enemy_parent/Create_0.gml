@@ -3,6 +3,9 @@
 //hurtbox
 //hurtbox = hurtbox_create(18,24,-9,-12);
 
+// 3D stuff
+vertexBuffer = obj_loader("plane.obj");
+
 //hitbox
 hitbox = -1;
 

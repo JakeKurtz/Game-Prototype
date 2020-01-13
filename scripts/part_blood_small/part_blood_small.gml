@@ -18,5 +18,5 @@ part_emitter_burst(obj_ps.part_system, obj_ps.part_emitter, obj_ps.part_blood, 5
 	
 var how_much_blood=irandom(2) 
 for (var i=0;i<how_much_blood;i++) { 
-	instance_create_layer(x+(irandom_range(-30, 30)),y+(irandom_range(-30, 30)), "surface_floor", obj_blood);
+	instance_create_layer(x+(irandom_range(-30, 30)),y+(irandom_range(-30, 30)), "Instances", obj_blood);
 }

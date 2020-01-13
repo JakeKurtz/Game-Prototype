@@ -5,7 +5,7 @@ var killed_by = argument[0];
 
 var how_much_gibs=irandom(2)+3;   
 for (var i=0;i<how_much_gibs;i++) { 
-   with (instance_create_layer(x+(irandom_range(-5, 5)),y+(irandom_range(-5, 5)), "Compatibility_Instances_Depth_0", obj_gibs)) {
+   with (instance_create_layer(x+(irandom_range(-5, 5)),y+(irandom_range(-5, 5)), "Instances", obj_gibs)) {
 		var _point_to_object = vector((killed_by.x - x+irandom_range(-10,10)),(killed_by.y - y+irandom_range(-10,10)));
 		velocity = vector_mulr(vector_scaler(_point_to_object, -1), irandom(5));
    }

@@ -1,11 +1,18 @@
 /// @description Camera controls
 
+offset = vec3(0, 200, -200);
+targetPos = vec3(obj_player.x, obj_player.y, obj_player.z);
+smoothedPos = lerpVec3(cameraPos, vecAdd(targetPos, offset), smoothSpeed);
+
+cameraPos = smoothedPos;
+cameraDir = vecAdd(cameraPos, cameraFront);
+
 // === Camera Translation === //
 
-if keyboard_check(ord("W")) cameraPos = matrix_vector_mul(matrix_build(0,cameraSpeed,0,0,0,0,1,1,1), cameraPos);
-if keyboard_check(ord("S")) cameraPos = matrix_vector_mul(matrix_build(0,-cameraSpeed,0,0,0,0,1,1,1), cameraPos);
-if keyboard_check(ord("A")) cameraPos = matrix_vector_mul(matrix_build(cameraSpeed,0,0,0,0,0,1,1,1), cameraPos);
-if keyboard_check(ord("D")) cameraPos = matrix_vector_mul(matrix_build(-cameraSpeed,0,0,0,0,0,1,1,1), cameraPos);
+//if keyboard_check(ord("W")) cameraPos = matrix_vector_mul(matrix_build(0,-cameraSpeed,0,0,0,0,1,1,1), cameraPos);
+//if keyboard_check(ord("S")) cameraPos = matrix_vector_mul(matrix_build(0,cameraSpeed,0,0,0,0,1,1,1), cameraPos);
+//if keyboard_check(ord("A")) cameraPos = matrix_vector_mul(matrix_build(-cameraSpeed,0,0,0,0,0,1,1,1), cameraPos);
+//if keyboard_check(ord("D")) cameraPos = matrix_vector_mul(matrix_build(cameraSpeed,0,0,0,0,0,1,1,1), cameraPos);
 
 // === Camera Rotation === //
 
@@ -22,3 +29,4 @@ dir[0] = cos(degtorad(yaw)) * cos(degtorad(pitch));
 dir[1] = sin(degtorad(yaw)) * cos(degtorad(pitch));
 dir[2] = sin(degtorad(pitch));
 cameraFront = normalize(dir);
+

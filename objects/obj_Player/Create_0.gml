@@ -1,17 +1,18 @@
 /// @description Properties
 // TODO : Organize
-caster_init_polygon();
-caster_init_rectangle(0,0,0,0);
+//caster_init_polygon();
+//caster_init_rectangle(0,0,0,0);
+z = 0;
 
-z = -1;
-image_alpha=sprite_height/255; //piggyback alpha channel to encode sprite height
+// 3D stuff
+vertexBuffer = obj_loader("plane.obj");
 
 foo = 0;
 sword = true;
 bomb = false;
 
 //hurtbox
-hurtbox = hurtbox_create(18,22,-9,-12);
+hurtbox = hurtbox_create(18, 22, -9, -12);
 
 //hitbox
 hitbox = -1;

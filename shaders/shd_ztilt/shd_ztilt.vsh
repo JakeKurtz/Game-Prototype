@@ -12,7 +12,7 @@ void main()
 
     float top = 1.0 - mod( col.b * 255.0, 2.0); // identify upper vertex
     object_space_pos.z -= 255.0 * col.a * top; //tilt using alpha
-	//object_space_pos.y+=255.0*col.a*top;            // NEW LINE: col.a contains the sprite height - shift back y to overlap the bottom vertex => stands up straight.
+	object_space_pos.y+=127.5*col.a*top; // sprite is tilted at a 45 degree angle
     object_space_pos.y += col.a / 10.0; //tweak zfighting
 
     gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;

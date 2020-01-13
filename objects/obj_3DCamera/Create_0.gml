@@ -1,17 +1,19 @@
 /// @description Camera initialization
 
 // Camera position
-x = room_width/2; y = room_height/2; z = -400;
+x = 0; y = 0; z = 0;
 
 cameraPos = vec3(x, y, z);
-cameraFront = vec3(0,-1,1);
+cameraFront = vec3(0,0,0);
 cameraUp = vec3(0, 0, 1);
 
 cameraSpeed = 4;
 cameraZoom = 1;
 
-yaw = -45;
+yaw = -90;
 pitch = 45;
+
+smoothSpeed = 0.125;
 
 camera = camera_create();
 

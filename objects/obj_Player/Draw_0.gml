@@ -2,7 +2,7 @@
 
 //draw_shadow(18*.4,22*.2,0,8,0.75);
 
-draw_sprite_ext(sprite_index,image_index,x,y+z,image_xscale,image_yscale,0,c_white,image_alpha);
+//draw_sprite_ext(sprite_index,image_index,x,y+z,image_xscale,image_yscale,0,c_white,image_alpha);
 
 // Flash red when hit
 //draw_flash(flash);

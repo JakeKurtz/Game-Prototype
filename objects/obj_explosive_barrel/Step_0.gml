@@ -9,7 +9,7 @@ if (_health <= 0 && flag) {
 	global.camera_shake = true;
 	// explosion
 	for (var i = 0; i < irandom_range(3,5); i++) {
-	    instance_create_layer(x+irandom_range(-15,15),y+irandom_range(-15,15),"Compatibility_Instances_Depth_0", obj_fireBall_explode);
+	    instance_create_layer(x+irandom_range(-15,15),y+irandom_range(-15,15),"Instances", obj_fireBall_explode);
 	}
 	// spawn hitbox
 	if (hitbox == -1) hitbox = hitbox_create(128, 128, -64, -64, 15, 3, 45);

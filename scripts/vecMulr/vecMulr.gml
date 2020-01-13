@@ -2,8 +2,8 @@
 ///@arg vector
 ///@arg scale
 
-var r = argument0;
-var v1 = argument1;
+var v1 = argument0;
+var r = argument1;
 var v;
 
 for(var i = 0; i < array_length_1d(v1); i++) {

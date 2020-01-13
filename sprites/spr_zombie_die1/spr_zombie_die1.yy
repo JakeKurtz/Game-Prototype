@@ -3,7 +3,7 @@
     "modelName": "GMSprite",
     "mvc": "1.12",
     "name": "spr_zombie_die1",
-    "For3D": false,
+    "For3D": true,
     "HTile": false,
     "VTile": false,
     "bbox_bottom": 27,

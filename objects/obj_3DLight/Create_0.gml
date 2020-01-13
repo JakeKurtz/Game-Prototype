@@ -1,10 +1,10 @@
 /// @description Light initialization
 
 // light position
-lightPos = vec3(room_width/2, room_height/2, -500);
+lightPos = vec3(768, 900, -800);
 
 // light color
-lightColor = vec3(1, 0, 0);
+lightColor = vec3(1, 1, 1);
 
 shadowSurf = -1;
 
@@ -17,6 +17,8 @@ shadow_x = room_width/2;
 shadow_y = room_height/2;
 
 // light space matrix 
-shadow_projectionMatrix = matrix_build_projection_ortho(shadow_w, shadow_h, 1.0, 10000);
-shadow_viewMatrix = matrix_build_lookat(lightPos[0], lightPos[1], lightPos[2], shadow_x, shadow_y, 0, 0, 0, 1);
-lightSpaceMatrix = matrix_multiply(shadow_viewMatrix, shadow_projectionMatrix);
+lightSpaceProjection = matrix_build_projection_ortho(shadow_w, shadow_h, 1.0, 10000);
+lightSpaceView = matrix_build_lookat(lightPos[0], lightPos[1], lightPos[2], shadow_x, shadow_y, 0, 0, 0, 1);
+lightSpaceMatrix = matrix_multiply(lightSpaceView, lightSpaceProjection);
+
+lightToggle = false;

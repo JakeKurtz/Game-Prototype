@@ -2,6 +2,19 @@
 position = vector(x,y);
 velocity = vector(x_speed,y_speed);
 
+// *** 3D Stuff *** //
+
+modelMatrix = matrix_build(x - sprite_width / 2, 
+						   y - sprite_height / 2, 
+						   -(sqrt(2) * sprite_height) / 2, 
+						   -45, 
+						   0, 
+						   0, 
+						   sprite_width, 
+						   sprite_height, 
+						   sprite_height);
+tex = sprite_index;
+
 #region // Controls
 
 key_up = keyboard_check(ord("W"));
@@ -14,7 +27,7 @@ key_atk_hard = mouse_check_button_pressed(mb_right);
 
 key_attack = (key_atk_light || key_atk_hard);
 
-//if key_attack then instance_create_layer(mouse_x,mouse_y, "Compatibility_Instances_Depth_0", obj_light);
+//if key_attack then instance_create_layer(mouse_x,mouse_y, "Instances", obj_light);
 
 #endregion
 
@@ -30,14 +43,14 @@ if WASD_enabled {
 	if (key_down && key_right) facing = 3;
 } #endregion
 	
-if (key_left) image_xscale = -image_scale;
-else if (key_right) image_xscale = image_scale;
+if (key_left) image_xscale = image_scale;
+else if (key_right) image_xscale = -image_scale;
 
 if mouse_check_button(mb_left) foo++;
 else foo--;
 foo = clamp(foo, 0, 90);
 
-depth=clamp(z,-100,99);
+//depth=clamp(z,-100,99);
 
 // Decelerating movement
 if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))

@@ -18,6 +18,24 @@ with(obj_3D) {
 	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
 }
 
+with(obj_player) {
+	matrix_set(matrix_world, modelMatrix); // sending model matrix to shader
+    vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, image_index)); // sending mesh to GPU
+	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
+}
+
+with(obj_enemy_parent) {
+	matrix_set(matrix_world, modelMatrix); // sending model matrix to shader
+    vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, image_index)); // sending mesh to GPU
+	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
+}
+
+with(obj_container) {
+	matrix_set(matrix_world, modelMatrix); // sending model matrix to shader
+    vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, image_index)); // sending mesh to GPU
+	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
+}
+
 shader_reset();
 surface_reset_target();
 #endregion
@@ -31,6 +49,7 @@ shader_set_uniform_f_array( shader_get_uniform( sh_lighting, "lightSpaceMatrix" 
 shader_set_uniform_f( shader_get_uniform( sh_lighting, "lightPos" ), lightPos[0], lightPos[1], lightPos[2]);
 shader_set_uniform_f( shader_get_uniform( sh_lighting, "lightColor" ), lightColor[0], lightColor[1], lightColor[2]);
 shader_set_uniform_f( shader_get_uniform( sh_lighting, "viewPos" ), obj_3DCamera.x, obj_3DCamera.y, obj_3DCamera.z);
+shader_set_uniform_i( shader_get_uniform( sh_lighting, "lightToggle"), lightToggle);
 texture_set_stage( shader_get_sampler_index( sh_lighting, "shadowMap" ), surface_get_texture( shadowSurf ) );
 
 with(obj_3D) {
@@ -41,6 +60,24 @@ with(obj_3D) {
 	//shader_set_uniform_f_array( shader_get_uniform( sh_lighting, "ModelMatrixInverseTranspose" ), ModelMatrixInverseTranspose );
 	
 	vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, 1)); // sending mesh to GPU
+	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
+}
+
+with(obj_player) {
+	matrix_set(matrix_world, modelMatrix); // sending model matrix to shader
+    vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, image_index)); // sending mesh to GPU
+	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
+}
+
+with(obj_enemy_parent) {
+	matrix_set(matrix_world, modelMatrix); // sending model matrix to shader
+    vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, image_index)); // sending mesh to GPU
+	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
+}
+
+with(obj_container) {
+	matrix_set(matrix_world, modelMatrix); // sending model matrix to shader
+    vertex_submit(vertexBuffer, pr_trianglelist, sprite_get_texture(tex, image_index)); // sending mesh to GPU
 	matrix_set(matrix_world, matrix_build_identity()); // resetting model matrix after the shader is done
 }
 

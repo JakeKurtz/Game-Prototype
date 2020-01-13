@@ -20,7 +20,7 @@ enum RenderState{
 
 renderstate = RenderState.set; // default  
 
-layer_script_end(layer_get_id("Background"), render_layer_master) // start zbuffering after background has drawn and cleared the screen!
-layer_script_begin(layer_get_id("Controllers"), render_layer_master) // end zbuffering before controllers run
+//layer_script_end(layer_get_id("Background"), render_layer_master) // start zbuffering after background has drawn and cleared the screen!
+//layer_script_begin(layer_get_id("Controllers"), render_layer_master) // end zbuffering before controllers run
 
-tilt_layer_sprites(true);
+//tilt_layer_sprites(true);

@@ -1,7 +1,7 @@
 if(state_new) {
 	image_index = 0;
 	sprite_index = attack_animations[irandom(array_length_1d(attack_animations)-1)];
-	with(instance_create_layer(x,y,"Compatibility_Instances_Depth_0",obj_fireBall)) {
+	with(instance_create_layer(x,y,"Instances",obj_fireBall)) {
 		image_xscale = other.image_xscale;
 		image_yscale = other.image_yscale;
 	}

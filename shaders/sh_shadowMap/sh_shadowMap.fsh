@@ -1,3 +1,4 @@
+varying vec2 Texcoord;
 varying float depth;
 
 vec3 depth_to_col ( float depth ) {
@@ -8,6 +9,7 @@ vec3 depth_to_col ( float depth ) {
 }
 
 void main() {
-    gl_FragColor = vec4 (depth_to_col(depth), 1.0 );
+	if (texture2D(gm_BaseTexture, Texcoord).a < 1.0) discard;
+    gl_FragColor = vec4 (depth_to_col(depth), 1.0);
 }
 

@@ -2,7 +2,18 @@
 
 position = vector(x,y);
 
-depth = -y;
+// *** 3D Stuff *** //
+
+modelMatrix = matrix_build(x - sprite_width / 2, 
+						   y - sprite_height / 2, 
+						   -(sqrt(2) * sprite_height) / 2, 
+						   -45, 
+						   0, 
+						   0, 
+						   sprite_width, 
+						   sprite_height, 
+						   sprite_height);
+tex = sprite_index;
 
 var vector_dir = ceil(vector_direction(velocity));
 
@@ -14,8 +25,8 @@ else if (vector_dir >= 225 && vector_dir < 270) facing = 3;
 else if (vector_dir >= 270 && vector_dir < 315) facing = 3;
 else if (vector_dir >= 345) facing = 2;
 
-if ((vector_dir >= 0 && vector_dir <= 70) || (vector_dir >= 290 && vector_dir <= 360)) image_xscale = image_scale;
-else if (vector_dir >= 110 && vector_dir <= 250) image_xscale = -image_scale;
+if ((vector_dir >= 0 && vector_dir <= 70) || (vector_dir >= 290 && vector_dir <= 360)) image_xscale = -image_scale;
+else if (vector_dir >= 110 && vector_dir <= 250) image_xscale = image_scale;
 
 #region // horizontal collision
 if (place_meeting(x+velocity[1],y,obj_solid_nonentity)) {
