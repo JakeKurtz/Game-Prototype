@@ -1,7 +1,7 @@
 /// @description Light initialization
 
 // light position
-lightPos = vec3(768, 900, -800);
+lightPos = vec3(-200, 600, -800);
 
 // light color
 lightColor = vec3(1, 1, 1);

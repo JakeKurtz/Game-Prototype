@@ -2,6 +2,8 @@
 
 position = vector(x,y);
 
+depth = -y;
+
 // *** 3D Stuff *** //
 
 modelMatrix = matrix_build(x - sprite_width / 2, 

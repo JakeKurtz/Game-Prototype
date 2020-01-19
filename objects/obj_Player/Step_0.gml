@@ -50,7 +50,6 @@ if mouse_check_button(mb_left) foo++;
 else foo--;
 foo = clamp(foo, 0, 90);
 
-//depth=clamp(z,-100,99);
 
 // Decelerating movement
 if (x_speed != 0) x_speed -= (walk_decel * sign(x_speed))

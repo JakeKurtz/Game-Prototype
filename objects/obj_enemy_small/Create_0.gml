@@ -50,4 +50,4 @@ ds_map_add(hitbox_range, spr_zombie_attack2, 4);
 #endregion
 
 //Set the default state
-state_init("Wander");
+state_init("Pursue");
