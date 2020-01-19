@@ -1,20 +1,24 @@
 ## Gameplay so far
 
 ### Attack with dust particles
-
 ![](attack_and_dust.gif)
 
-### Attacking enemies
+### Gore
 
-![](gameplay.gif)
-
-### Gore implementation
-
-![](gore_demo.gif)
-
-### Zombie horde with new gore system
-
+###### Blood Particles
 ![](zombie_horde_blood.gif)
+###### Gibs
+![](gibs.gif)
+
+### Enemy Behaviour
+
+###### Crowd navigation
+![](LrgCrowd.gif)
+###### Attack and Fleeing
+![](flee.gif)
+
+### Phong and Shadow Maps
+![](shadows.gif)
 
 ## Acknowledgments
 
